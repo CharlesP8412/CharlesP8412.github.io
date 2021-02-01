@@ -20,9 +20,9 @@ const Footer = () => (
           </a>
         </li>
       </ul>
-      <ul className="copyright">
+      {/* <ul className="copyright">
         <li> Thanks to &copy;Gatsby Starter Strata</li>
-      </ul>
+      </ul> */}
     </div>
   </div>
 )

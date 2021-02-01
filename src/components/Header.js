@@ -9,7 +9,7 @@ const Header = () => (
         <img src={avatar} alt="" />
       </a>
       <h1>
-        <strong>Chuck Prystupa</strong>
+        <strong>Chuck Prystupa&nbsp;</strong>
         <br />
         Full stack developer&nbsp;
         <br />

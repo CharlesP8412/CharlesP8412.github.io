@@ -19,7 +19,7 @@ const HomeIndex = () => {
         <section id="one">
           <header className="major">
             <h2>
-              Developer, IT Admin, Communications Specialist,
+              Developer, IT Admin, Communications Specialist,&nbsp;
               <br />
               Adaptable Problem Solver
             </h2>
