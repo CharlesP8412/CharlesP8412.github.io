@@ -5,8 +5,8 @@ import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 
 const HomeIndex = () => {
-  const siteTitle = 'Gatsby Starter - Strata'
-  const siteDescription = 'Site description'
+  const siteTitle = 'Chuck Prystupa - FS Developer'
+  const siteDescription = 'Portfolio of Chuck Prystupa'
 
   return (
     <Layout>
@@ -19,26 +19,43 @@ const HomeIndex = () => {
         <section id="one">
           <header className="major">
             <h2>
-              Ipsum lorem dolor aliquam ante commodo
+              Developer, IT Admin, Communications Specialist,
               <br />
-              magna sed accumsan arcu neque.
+              Problem solver, and Jack of all trades
             </h2>
           </header>
           <p>
-            Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc
-            nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae
-            lobortis tortor primis integer massa adipiscing id nisi accumsan
-            pellentesque commodo blandit enim arcu non at amet id arcu magna.
-            Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate
-            lorem neque cubilia.
+            As a full stack developer I truely enjoy having the ability to shape and sculp
+            the nerves of the information systems we use everyday.
+            <br />
+            I've alway gravitated to electronics and technology throughout my life.
+            From developing and experimenting with my home lab to install radio systems
+            in past careers, I am always eager to develop a new skill and apply
+            my experience and prior skills to find new solutions.
+
           </p>
           <ul className="actions">
             <li>
-              <a href="#" className="button">
-                Learn More
-              </a>
+              <span>
+                <a href="https://www.canva.com/design/DAESCGsX-ak/Pc4kmpGUT0cMQiZxfJEPiQ/view" className="button" target="_blank">
+                  Learn More (Resume)
+                </a>
+              </span>
             </li>
           </ul>
+          <p>
+            <strong>Languages:</strong> <br />
+            Javascript, Ruby, HTML, CSS, SQL  <br />
+            <strong>Frameworks:</strong> <br />
+            React, SASS, Express, Axios, jQuery, EJS, Rails, NodeJS  <br />
+            <strong>Databases and CMS:</strong> <br />
+            PostgreSQL (PSQL), Git, GitLab, Github, Jenkins  <br />
+            <strong>Testind, CD/CI:</strong> <br />
+            JEST, Storybook, Cypress, Mocha, Chai, Rspec, CircleCI, Jenkins  <br />
+            <strong>Other Skills:</strong> <br />
+            Networking (Cisco), Server and Desktop Admin (Microsoft), Linux, Project Managemnet
+           </p>
+
         </section>
 
         <section id="two">
@@ -48,8 +65,8 @@ const HomeIndex = () => {
 
           <ul className="actions">
             <li>
-              <a href="#" className="button">
-                Full Portfolio
+              <a href="https://github.com/CharlesP8412" className="button">
+                GitHub Projects
               </a>
             </li>
           </ul>
@@ -58,12 +75,12 @@ const HomeIndex = () => {
         <section id="three">
           <h2>Get In Touch</h2>
           <p>
-            Accumsan pellentesque commodo blandit enim arcu non at amet id arcu
-            magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem
-            vulputate lorem neque lorem ipsum dolor.
+            If you are looking for talent for your company or organization
+            please don't hesitate to contact me.
+            I would enjoy discussing how I can contribute to your organization.
           </p>
           <div className="row">
-            <div className="8u 12u$(small)">
+            {/* <div className="8u 12u$(small)">
               <form method="post" action="#">
                 <div className="row uniform 50%">
                   <div className="6u 12u$(xsmall)">
@@ -97,31 +114,24 @@ const HomeIndex = () => {
                   </li>
                 </ul>
               </form>
-            </div>
+            </div> */}
             <div className="4u 12u$(small)">
               <ul className="labeled-icons">
-                <li>
-                  <h3 className="icon fa-home">
-                    <span className="label">Address</span>
-                  </h3>
-                  1234 Somewhere Rd.
-                  <br />
-                  Nashville, TN 00000
-                  <br />
-                  United States
-                </li>
-                <li>
-                  <h3 className="icon fa-mobile">
-                    <span className="label">Phone</span>
-                  </h3>
-                  000-000-0000
-                </li>
                 <li>
                   <h3 className="icon fa-envelope-o">
                     <span className="label">Email</span>
                   </h3>
-                  <a href="#">hello@untitled.tld</a>
+                  <a href="mailto:charles.prystupa@gmail.com">charles.prystupa@gmail.com</a>
                 </li>
+                <li>
+                  <h3 className="icon fa-home">
+                    <span className="label">Address</span>
+                  </h3>
+                  Cambridge, Ontario
+                  <br />
+                  Canada
+                </li>
+
               </ul>
             </div>
           </div>

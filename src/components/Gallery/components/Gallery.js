@@ -13,23 +13,25 @@ const Gallery = ({ images = DEFAULT_IMAGES }) => {
     setSelectedIndex(selectedIndex)
   }, [lightboxIsOpen])
 
+
+
   return (
     <div>
       {images && (<div className="row">
         {images.map((obj, i) => {
-        return (<GalleryItem
-          id={obj.id}
-          source={obj.source}
-          thumbnail={obj.thumbnail}
-          caption={obj.caption}
-          description={obj.description}
-          position={obj.position}
-          toggleLightbox={obj.toggleLightbox}
-          position={i}
-          toggleLightbox={toggleLightbox}
-        />); 
+          return (<GalleryItem
+            id={obj.id}
+            source={obj.source}
+            thumbnail={obj.thumbnail}
+            caption={obj.caption}
+            description={obj.description}
+            position={obj.position}
+            toggleLightbox={obj.toggleLightbox}
+            position={i}
+            toggleLightbox={toggleLightbox}
+          />);
         })}
-        </div>
+      </div>
       )}
       <ModalGateway>
         {lightboxIsOpen && (
