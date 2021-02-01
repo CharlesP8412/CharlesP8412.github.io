@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 
-const GalleryItem = ({id, source, thumbnail, caption, description, position, toggleLightbox}) => {
+const GalleryItem = ({ id, source, thumbnail, caption, description, position, toggleLightbox }) => {
 
     const onClick = useCallback((e) => {
         e.preventDefault()
@@ -10,11 +10,11 @@ const GalleryItem = ({id, source, thumbnail, caption, description, position, tog
 
     return (<article key={id} className="6u 12u$(xsmall) work-item">
         <a
-        className="image fit thumb"
-        href={source}
-        onClick={onClick}
+            className="image fit thumb"
+            href={source}
+            onClick={onClick}
         >
-        <img src={thumbnail} />
+            <img src={thumbnail} alt="" />
         </a>
 
         <h3>{caption}</h3>
@@ -24,13 +24,13 @@ const GalleryItem = ({id, source, thumbnail, caption, description, position, tog
 
 GalleryItem.displayName = 'GalleryItem'
 GalleryItem.propTypes = {
-  id: PropTypes.string.isRequired,
-  source: PropTypes.string.isRequired,
-  thumbnail: PropTypes.string.isRequired,
-  caption: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
-  toggleLightbox: PropTypes.func.isRequired
+    id: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string.isRequired,
+    caption: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired,
+    toggleLightbox: PropTypes.func.isRequired
 }
 
 export default GalleryItem

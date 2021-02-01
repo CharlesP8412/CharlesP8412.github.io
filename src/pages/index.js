@@ -25,19 +25,17 @@ const HomeIndex = () => {
             </h2>
           </header>
           <p>
-            As a full stack developer I truly enjoy having the ability to shape and sculpt
-            the nerves of the information systems we use everyday.
+            As a full stack developer, I truly enjoy having the ability to shape and sculpt
+            the nerves of the information systems we use every day.
             <br />
-            I've alway gravitated to electronics and technology throughout my life.
-            From developing and experimenting with my home lab to install radio systems
-            in past careers, I am always eager to develop a new skill and apply
-            my experience and prior skills to find new solutions.
-
+            I've always gravitated to electronics and technology throughout my life.
+            From developing and experimenting with my home lab to install radio systems in past careers,
+            I am always keen to develop new skills and apply my experience and prior skills to find new solutions.
           </p>
           <ul className="actions">
             <li>
               <span>
-                <a href="https://www.canva.com/design/DAESCGsX-ak/Pc4kmpGUT0cMQiZxfJEPiQ/view" className="button" target="_blank">
+                <a href="https://www.canva.com/design/DAESCGsX-ak/Pc4kmpGUT0cMQiZxfJEPiQ/view" className="button" rel="noreferrer" target="_blank">
                   Learn More (Resume)
                 </a>
               </span>
@@ -50,7 +48,7 @@ const HomeIndex = () => {
             React, SASS, Express, Axios, jQuery, EJS, Rails, NodeJS  <br />
             <strong>Databases and CMS:</strong> <br />
             PostgreSQL (PSQL), Git, GitLab, Github, Jenkins  <br />
-            <strong>Testind, CD/CI:</strong> <br />
+            <strong>Testing, CD/CI:</strong> <br />
             JEST, Storybook, Cypress, Mocha, Chai, Rspec, CircleCI, Jenkins  <br />
             <strong>Other Skills:</strong> <br />
             Networking (Cisco), Server and Desktop Admin (Microsoft), Linux, Project Management
