@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{w2l6:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),r=(n("TJpk"),n("Bl7J"));t.default=function(){return l.a.createElement(r.a,null,l.a.createElement("div",{id:"main"},l.a.createElement("h1",null,"NOT FOUND"),l.a.createElement("p",null,"Route that doesn't exist...",l.a.createElement("a",{href:"https://cprystupa.com/"},"Return to the root"))))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-ef378ea90625456f3501.js.map
