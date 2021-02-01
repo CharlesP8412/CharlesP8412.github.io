@@ -21,11 +21,11 @@ const HomeIndex = () => {
             <h2>
               Developer, IT Admin, Communications Specialist,
               <br />
-              Problem solver, and Jack of all trades
+              Adaptable Problem Solver
             </h2>
           </header>
           <p>
-            As a full stack developer I truely enjoy having the ability to shape and sculp
+            As a full stack developer I truly enjoy having the ability to shape and sculpt
             the nerves of the information systems we use everyday.
             <br />
             I've alway gravitated to electronics and technology throughout my life.
@@ -53,7 +53,7 @@ const HomeIndex = () => {
             <strong>Testind, CD/CI:</strong> <br />
             JEST, Storybook, Cypress, Mocha, Chai, Rspec, CircleCI, Jenkins  <br />
             <strong>Other Skills:</strong> <br />
-            Networking (Cisco), Server and Desktop Admin (Microsoft), Linux, Project Managemnet
+            Networking (Cisco), Server and Desktop Admin (Microsoft), Linux, Project Management
            </p>
 
         </section>

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Footer from './Footer'
 import avatar from '../assets/images/avatar.jpg'
 
@@ -12,11 +11,11 @@ const Header = () => (
       <h1>
         <strong>Chuck Prystupa</strong>
         <br />
-        Full stack developer
+        Full stack developer&nbsp;
         <br />
-        Veteran
+        Jack of all trades&nbsp;
         <br />
-        Jack of all trades
+        Veteran&nbsp;
         <br />
       </h1>
     </div>
