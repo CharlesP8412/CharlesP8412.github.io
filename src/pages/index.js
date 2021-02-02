@@ -29,7 +29,7 @@ const HomeIndex = () => {
             the nerves of the information systems we use every day.
             <br />
             I've always gravitated to electronics and technology throughout my life.
-            From developing and experimenting with my home lab to install radio systems in past careers,
+            From developing and experimenting with my home lab, to deploying and using radio and information systems in past careers,
             I am always keen to develop new skills and apply my experience and prior skills to find new solutions.
           </p>
           <ul className="actions">
