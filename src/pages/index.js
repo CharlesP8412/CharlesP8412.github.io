@@ -5,7 +5,7 @@ import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 
 const HomeIndex = () => {
-  const siteTitle = 'Chuck Prystupa - FS Developer'
+  const siteTitle = 'Chuck Prystupa - Web Developer'
   const siteDescription = 'Portfolio of Chuck Prystupa'
 
   return (
