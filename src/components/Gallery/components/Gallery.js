@@ -17,6 +17,9 @@ const Gallery = ({ images = projects }) => {
 
   return (
     <div>
+      <form>
+        <input type="text" id="projects" name="projects" value="" placeholder="Search Projects ie 'React' 'Javascript'"></input>
+      </form>
       {images && (<div className="row">
         {images.map((obj, i) => {
           return (<GalleryItem
