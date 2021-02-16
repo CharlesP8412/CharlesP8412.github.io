@@ -16,16 +16,45 @@ const Gallery = () => {
   }, [lightboxIsOpen]);
 
   const handleChange = (e) => {
+    e.preventDefault();
     const { value } = e.target;
     setForm(value);
   };
 
+  const search = (searchTerm, list) => {
+    if (!list) {
+      return;
+    }
+    if (!searchTerm) {
+      return list;
+    }
+    searchTerm = searchTerm.toLowerCase();
+    //Iterate over List
+    const sResults = [];
+    list.map((proj) => {
+      //Iterate over proj values
+      Object.values(proj).map(val => {
+        //Match to search terms
+        if (val) {
+          val.toString().toLowerCase();
+          if (val.includes(searchTerm)) {
+            console.log("AAA", proj, val)
+            sResults.push(proj);
+          }
+        }
+      })
+    })
+    console.log("input", searchTerm, list, sResults)
+
+    //Rtn Results (Array of Obj)
+    return sResults;
+  }
 
   useEffect(() => {
-
+    search(form, projects)
   }, [form]);
 
-  const parsedList = projects && projects.map((obj, i) => {
+  const projectList = projects && projects.map((obj, i) => {
     return (
       <GalleryItem
         id={obj.id}
@@ -33,8 +62,6 @@ const Gallery = () => {
         thumbnail={obj.thumbnail}
         caption={obj.caption}
         description={obj.description}
-        // position={obj.position}
-        // toggleLightbox={obj.toggleLightbox}
         position={i}
         toggleLightbox={toggleLightbox}
       />
@@ -44,11 +71,10 @@ const Gallery = () => {
 
   return (
     <div>
-      <form>
-        <input type="text" id="projects" name="projects" onChange={handleChange} value={form} placeholder="Search Projects..."></input>
-      </form>
+      <input type="text" id="projects" name="projects" onChange={handleChange} value={form} placeholder="Search Projects..."></input>
+      <br />
       {projects && (<div className="row">
-        {parsedList}
+        {projectList}
       </div>
       )}
       <ModalGateway>
