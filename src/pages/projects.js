@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import thumb01 from '../assets/images/thumbs/01.jpg'
 
 const finishedProjects = {
   "001": {
@@ -22,9 +23,13 @@ const finishedProjects = {
   }
 }
 
-const parseList = Object.values(finishedProjects).map((project) => {
+const projectList = Object.values(finishedProjects).map((project) => {
   return (
-    <li>{project.name}</li>
+    <article>
+      <h2>{project.name}</h2>
+      <img src={thumb01} alt="" />
+      <p>HTML | CSS | REACT</p>
+    </article>
   )
 })
 
@@ -33,7 +38,7 @@ const projects = () => (
     <div id="main">
       <h1>Projects</h1>
       <form>Search bar</form>
-      <ul>{parseList ? parseList : "No Items"}</ul>
+      <main>{projectList ? projectList : "No Items"}</main>
     </div>
   </Layout>
 )

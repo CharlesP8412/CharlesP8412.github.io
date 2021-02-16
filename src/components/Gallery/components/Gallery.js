@@ -2,9 +2,9 @@ import React, { useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 import GalleryItem from './GalleryItem'
-import { DEFAULT_IMAGES } from '../constants/defaultImages'
+import { projects } from '../constants/projects'
 
-const Gallery = ({ images = DEFAULT_IMAGES }) => {
+const Gallery = ({ images = projects }) => {
   const [lightboxIsOpen, setLightboxIsOpen] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
 
