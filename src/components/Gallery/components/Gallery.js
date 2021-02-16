@@ -54,7 +54,7 @@ const Gallery = () => {
     search(form, projects)
   }, [form]);
 
-  const projectList = projects && projects.map((obj, i) => {
+  const projectList = results && results.map((obj, i) => {
     return (
       <GalleryItem
         id={obj.id}
