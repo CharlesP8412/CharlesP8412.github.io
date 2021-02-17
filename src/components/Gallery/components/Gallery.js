@@ -36,9 +36,11 @@ const Gallery = () => {
       //Trim Project Data
       Object.values(proj).map((val) => {
         //Match to search terms
-        if (typeof val === 'string') {
-          val = val.toLowerCase()
+        if (typeof val === 'object') {
+          val = val.join(" ")
+          console.log("AAA", val)
         }
+        val = val.toLowerCase()
         if (typeof val === 'string' && val.includes(searchTerm)) {
           console.log("PROJ", proj, "VAL", val)
           sResults = { ...sResults, [proj.id]: { ...proj } }
