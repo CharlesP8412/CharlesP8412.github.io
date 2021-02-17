@@ -51,7 +51,7 @@ const Gallery = () => {
   }
 
   useEffect(() => {
-    search(form, projects)
+    setResults(search(form, projects));
   }, [form]);
 
   const projectList = results && results.map((obj, i) => {
