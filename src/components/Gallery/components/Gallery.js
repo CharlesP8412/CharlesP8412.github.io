@@ -33,18 +33,21 @@ const Gallery = () => {
     let sResults = {};
     list.map((proj) => {
       //Iterate over proj values
-      Object.values(proj).map(val => {
+      //Trim Project Data
+      Object.values(proj).map((val) => {
         //Match to search terms
-        if (val) {
-          val.toString().toLowerCase();
-          if (val.includes(searchTerm)) {
-            console.log("AAA", proj, val)
-            sResults = { ...sResults, [proj.id]: { ...proj } }
-          }
+        if (typeof val === 'string') {
+          val = val.toLowerCase()
+        }
+        if (typeof val === 'string' && val.includes(searchTerm)) {
+          console.log("PROJ", proj, "VAL", val)
+          sResults = { ...sResults, [proj.id]: { ...proj } }
+        } else {
+          console.log("NO MATCH val", val, typeof val)
         }
       })
     })
-    console.log("input", searchTerm, list, sResults)
+    console.log("term", searchTerm, "list", list, "Search", sResults)
 
     //Rtn Results (Array of Obj)
     return sResults;

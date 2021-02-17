@@ -70,7 +70,7 @@ export const projects = [
     caption: 'Tiny App',
     description: 'URL Shortening App. Given a url the app will generate a shorter url and act as a relay. (Server-side rendering)',
     gitub: `https://github.com/CharlesP8412/tinyapp`,
-    stack: ['NodeJS', 'Express', 'EJS', 'bcrpyt', 'cookie-sessins'],
+    stack: ['NodeJS', 'Express', 'EJS', 'bcrpyt', 'cookie-sessions'],
     features: ['Server Side Rendering', 'User Authentication',]
   }
 ]
