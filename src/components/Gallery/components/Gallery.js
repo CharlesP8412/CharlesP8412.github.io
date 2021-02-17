@@ -29,8 +29,8 @@ const Gallery = () => {
       return list;
     }
     searchTerm = searchTerm.toLowerCase();
-    //Iterate over List
-    const sResults = [];
+    //Iterate over projects
+    let sResults = {};
     list.map((proj) => {
       //Iterate over proj values
       Object.values(proj).map(val => {
@@ -39,7 +39,7 @@ const Gallery = () => {
           val.toString().toLowerCase();
           if (val.includes(searchTerm)) {
             console.log("AAA", proj, val)
-            sResults.push(proj);
+            sResults = { ...sResults, [proj.id]: { ...proj } }
           }
         }
       })
@@ -54,7 +54,7 @@ const Gallery = () => {
     setResults(search(form, projects));
   }, [form]);
 
-  const projectList = results && results.map((obj, i) => {
+  const projectList = results && Object.values(results).map((obj, i) => {
     return (
       <GalleryItem
         id={obj.id}
