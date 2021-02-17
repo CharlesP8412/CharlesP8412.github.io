@@ -33,25 +33,17 @@ const Gallery = () => {
     let sResults = {};
     list.map((proj) => {
       //Iterate over proj values
-      //Trim Project Data
       Object.values(proj).map((val) => {
         //Match to search terms
         if (typeof val === 'object') {
           val = val.join(" ")
-          console.log("AAA", val)
         }
         val = val.toLowerCase()
         if (typeof val === 'string' && val.includes(searchTerm)) {
-          console.log("PROJ", proj, "VAL", val)
           sResults = { ...sResults, [proj.id]: { ...proj } }
-        } else {
-          console.log("NO MATCH val", val, typeof val)
         }
       })
     })
-    console.log("term", searchTerm, "list", list, "Search", sResults)
-
-    //Rtn Results (Array of Obj)
     return sResults;
   }
 
@@ -62,12 +54,13 @@ const Gallery = () => {
   const projectList = results && Object.values(results).map((obj, i) => {
     return (
       <GalleryItem
+        key={obj.id}
         id={obj.id}
         source={obj.source}
         thumbnail={obj.thumbnail}
         caption={obj.caption}
         description={obj.description}
-        position={i}
+        position={i.toString()}
         toggleLightbox={toggleLightbox}
       />
     );
