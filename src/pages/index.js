@@ -57,7 +57,7 @@ const HomeIndex = () => {
         </section>
 
         <section id="two">
-          <h2>Recent Work</h2>
+
 
           <Gallery />
 

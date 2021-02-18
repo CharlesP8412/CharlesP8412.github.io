@@ -68,21 +68,27 @@ const Gallery = () => {
 
 
   return (
-    <div>
-      <input type="text" id="projects" name="projects" onChange={handleChange} value={form} placeholder="Search Projects..."></input>
-      <br />
-      {projects && (<div className="row">
-        {projectList}
-      </div>
-      )}
-      <ModalGateway>
-        {lightboxIsOpen && (
-          <Modal onClose={toggleLightbox}>
-            <Carousel currentIndex={selectedIndex} views={projects} />
-          </Modal>
+    <React.Fragment>
+      <span className='projectSearch'>
+        <h2 className='title'>Recent Work</h2>
+        <input type="text" id="projects" name="projects" onChange={handleChange} value={form} placeholder="Search Projects..."></input>
+      </span>
+      <div>
+
+        <br />
+        {projects && (<div className="row">
+          {projectList}
+        </div>
         )}
-      </ModalGateway>
-    </div>
+        <ModalGateway>
+          {lightboxIsOpen && (
+            <Modal onClose={toggleLightbox}>
+              <Carousel currentIndex={selectedIndex} views={projects} />
+            </Modal>
+          )}
+        </ModalGateway>
+      </div>
+    </React.Fragment>
   )
 }
 

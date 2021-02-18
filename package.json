@@ -1,7 +1,7 @@
 {
   "name": "porfolio",
   "description": "Portfolio of Chuck Prystupa",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Chuck Prystupa",
   "dependencies": {
     "gatsby": "^2.20.12",
