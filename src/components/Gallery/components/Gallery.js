@@ -60,6 +60,7 @@ const Gallery = () => {
         thumbnail={obj.thumbnail}
         caption={obj.caption}
         description={obj.description}
+        stack={obj.stack}
         position={i.toString()}
         toggleLightbox={toggleLightbox}
       />
