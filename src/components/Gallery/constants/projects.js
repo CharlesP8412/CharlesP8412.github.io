@@ -4,22 +4,24 @@ import full03 from '../../../assets/images/fulls/03.gif'
 import full04 from '../../../assets/images/fulls/04.gif'
 import full05 from '../../../assets/images/fulls/05.jpg'
 import full06 from '../../../assets/images/fulls/06.jpg'
-import thumb02 from '../../../assets/images/thumbs/02.jpg'
 import thumb01 from '../../../assets/images/thumbs/01.jpg'
+import thumb02 from '../../../assets/images/thumbs/02.jpg'
 import thumb03 from '../../../assets/images/thumbs/03.jpg'
 import thumb04 from '../../../assets/images/thumbs/04.jpg'
 import thumb05 from '../../../assets/images/thumbs/05.jpg'
 import thumb06 from '../../../assets/images/thumbs/06.jpg'
 
 
-export const DEFAULT_IMAGES = [
+export const projects = [
   {
     id: '1',
     source: full01,
     thumbnail: thumb01,
     caption: 'BookEnds',
     description: "Book data manager, allowing users to add data about the books they've read and share with friends. Group Collaboration",
-    gitub: `https://github.com/dimontejulia/bookends`
+    gitub: `https://github.com/dimontejulia/bookends`,
+    stack: ['React', 'PosgreSQL', 'Express', 'NodeJS', 'Bootstrap', 'SCSS'],
+    features: ['Live Search', 'Multiple APIs']
   },
   {
     id: '2',
@@ -27,7 +29,9 @@ export const DEFAULT_IMAGES = [
     thumbnail: thumb02,
     caption: 'PasswordKeepr',
     description: 'Password generator and manager ideal for shared accounts.  Built using NodeJS, Express, EJS, and CSS. Group Collaboration',
-    gitub: `https://github.com/dlinardi/PasswordKeepR`
+    gitub: `https://github.com/dlinardi/PasswordKeepR`,
+    stack: ['PosgreSQL', 'Express', 'NodeJS', 'SCSS'],
+    features: ['Live Search', 'Encryption', 'Hashed User Data']
   },
   {
     id: '3',
@@ -35,7 +39,9 @@ export const DEFAULT_IMAGES = [
     thumbnail: thumb03,
     caption: 'Scheduler',
     description: 'React based Interview Scheduler (SPA), built using TDD methods.',
-    gitub: `https://github.com/CharlesP8412/scheduler`
+    gitub: `https://github.com/CharlesP8412/scheduler`,
+    stack: ['React', 'mySQL'],
+    features: ['Single Page Application (SPA)', 'JEST', 'Axios', 'CI/CD', 'Cypress',]
   },
   {
     id: '4',
@@ -43,7 +49,9 @@ export const DEFAULT_IMAGES = [
     thumbnail: thumb04,
     caption: 'Jungle',
     description: 'Mini E-commerce app built using MVC design, integrates Stripe payments API. Build using EDD.',
-    gitub: `https://github.com/CharlesP8412/jungle`
+    gitub: `https://github.com/CharlesP8412/jungle`,
+    stack: ['Ruby on Rails 4', 'PostgreSQL'],
+    features: ['Authentication', 'Capybara', 'StripeAPI', 'RSpec',]
   },
   {
     id: '5',
@@ -51,7 +59,9 @@ export const DEFAULT_IMAGES = [
     thumbnail: thumb05,
     caption: 'Tweeter',
     description: 'Single Page Application, Twitter Clone utilizing client side rendering.',
-    gitub: `https://github.com/CharlesP8412/tweeter`
+    gitub: `https://github.com/CharlesP8412/tweeter`,
+    stack: ['jQuery', 'CSS', 'NodeJS', 'Expres',],
+    features: ['Single Page App (SPA)', 'Client Side Rendering',]
   },
   {
     id: '6',
@@ -59,6 +69,8 @@ export const DEFAULT_IMAGES = [
     thumbnail: thumb06,
     caption: 'Tiny App',
     description: 'URL Shortening App. Given a url the app will generate a shorter url and act as a relay. (Server-side rendering)',
-    gitub: `https://github.com/CharlesP8412/tinyapp`
+    gitub: `https://github.com/CharlesP8412/tinyapp`,
+    stack: ['NodeJS', 'Express', 'EJS', 'bcrpyt', 'cookie-sessions'],
+    features: ['Server Side Rendering', 'User Authentication',]
   }
 ]
