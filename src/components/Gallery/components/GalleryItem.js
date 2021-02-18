@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
+import NodeJS from '../../../assets/images/techIcons/nodejs.png'
 
 const GalleryItem = ({ id, source, thumbnail, caption, description, position, toggleLightbox, stack }) => {
 
@@ -10,10 +11,13 @@ const GalleryItem = ({ id, source, thumbnail, caption, description, position, to
 
     const stackList = stack && stack.map((tech) => {
         if (tech === stack[stack.length - 1]) {
-            return tech;
+
+            return <img src={tech} alt={``} title={`${tech}`} width="25" height="25" />;
         } else {
+            console.log("TECH", tech)
             return (
-                `${tech} | `
+                <img src={tech} alt={``} title={`${tech}`} width="25" height="25" />
+                // `${tech} | `
             );
         }
     });
@@ -29,7 +33,7 @@ const GalleryItem = ({ id, source, thumbnail, caption, description, position, to
         </a>
         {/* CHANGE CLASS NAME IN SCSS FILE to cover both, also make flex spreadout */}
         <span>
-            <h3>{caption}</h3>
+            <h3 className="title">{caption}</h3>
             {stackList}
         </span>
         <p>{description}</p>

@@ -10,6 +10,7 @@ import thumb03 from '../../../assets/images/thumbs/03.jpg'
 import thumb04 from '../../../assets/images/thumbs/04.jpg'
 import thumb05 from '../../../assets/images/thumbs/05.jpg'
 import thumb06 from '../../../assets/images/thumbs/06.jpg'
+import nodeIco from "../../../assets/images/techIcons/nodejs.png";
 
 
 export const projects = [
@@ -20,7 +21,7 @@ export const projects = [
     caption: 'BookEnds',
     description: "Book data manager, allowing users to add data about the books they've read and share with friends. Group Collaboration",
     gitub: `https://github.com/dimontejulia/bookends`,
-    stack: ['React', 'PosgreSQL', 'Express', 'NodeJS', 'Bootstrap', 'SCSS'],
+    stack: ['React', 'PosgreSQL', 'Express', 'NodeJS', 'Bootstrap', 'SASS'],
     features: ['Live Search', 'Multiple APIs']
   },
   {
@@ -30,7 +31,7 @@ export const projects = [
     caption: 'PasswordKeepr',
     description: 'Password generator and manager ideal for shared accounts.  Built using NodeJS, Express, EJS, and CSS. Group Collaboration',
     gitub: `https://github.com/dlinardi/PasswordKeepR`,
-    stack: ['PosgreSQL', 'Express', 'NodeJS', 'SCSS'],
+    stack: ['PosgreSQL', 'Express', 'NodeJS', 'SASS'],
     features: ['Live Search', 'Encryption', 'bcrypt']
   },
   {
