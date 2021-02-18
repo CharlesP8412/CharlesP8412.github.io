@@ -61,7 +61,8 @@ span {
 .stackIco {
   margin: 0px 3px 0px 3px;
 }
-
+// @import './modal.scss';
+/* 
 .projectDisplay {
   display: flex;
   flex-flow: row;
@@ -74,9 +75,8 @@ span {
     width: 33%;
   }
 }
-
+ */
 /* Basic */
-
 body {
   background: _palette(bg);
 
