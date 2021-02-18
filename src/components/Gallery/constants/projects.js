@@ -31,7 +31,7 @@ export const projects = [
     description: 'Password generator and manager ideal for shared accounts.  Built using NodeJS, Express, EJS, and CSS. Group Collaboration',
     gitub: `https://github.com/dlinardi/PasswordKeepR`,
     stack: ['PosgreSQL', 'Express', 'NodeJS', 'SCSS'],
-    features: ['Live Search', 'Encryption', 'Hashed User Data']
+    features: ['Live Search', 'Encryption', 'bcrypt']
   },
   {
     id: '3',
