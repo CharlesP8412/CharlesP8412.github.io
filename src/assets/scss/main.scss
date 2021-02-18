@@ -61,6 +61,14 @@ span {
 .stackIco {
   margin: 0px 3px 0px 3px;
 }
+
+.projectDisplay {
+  display: flex;
+  .projectImages {
+    width: 33%;
+  }
+}
+
 /* Basic */
 
 body {

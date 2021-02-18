@@ -83,7 +83,7 @@ const Gallery = () => {
           {lightboxIsOpen && (
             <Modal onClose={toggleLightbox}>
               {/* <Carousel currentIndex={selectedIndex} views={projects} /> */}
-              <ProjectDetails />
+              <ProjectDetails currentIndex={selectedIndex} views={projects} />
             </Modal>
           )}
         </ModalGateway>
