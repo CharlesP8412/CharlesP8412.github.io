@@ -10,7 +10,6 @@ import thumb03 from '../../../assets/images/thumbs/03.jpg'
 import thumb04 from '../../../assets/images/thumbs/04.jpg'
 import thumb05 from '../../../assets/images/thumbs/05.jpg'
 import thumb06 from '../../../assets/images/thumbs/06.jpg'
-import nodeIco from "../../../assets/images/techIcons/nodejs.png";
 
 
 export const projects = [
