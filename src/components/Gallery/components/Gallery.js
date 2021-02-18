@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 import GalleryItem from './GalleryItem'
 import { projects } from '../constants/projects'
+import ProjectDetails from './ProjectDetails'
 
 const Gallery = () => {
   const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
@@ -81,7 +82,8 @@ const Gallery = () => {
         <ModalGateway>
           {lightboxIsOpen && (
             <Modal onClose={toggleLightbox}>
-              <Carousel currentIndex={selectedIndex} views={projects} />
+              {/* <Carousel currentIndex={selectedIndex} views={projects} /> */}
+              <ProjectDetails />
             </Modal>
           )}
         </ModalGateway>
