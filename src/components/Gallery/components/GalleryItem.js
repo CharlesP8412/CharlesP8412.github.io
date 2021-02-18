@@ -8,10 +8,14 @@ const GalleryItem = ({ id, source, thumbnail, caption, description, position, to
         toggleLightbox(position)
     }, [position, toggleLightbox]);
 
-    const stackList = stack && stack.map((obj) => {
-        return (
-            { obj }
-        );
+    const stackList = stack && stack.map((tech) => {
+        if (tech === stack[stack.length - 1]) {
+            return tech;
+        } else {
+            return (
+                `${tech} | `
+            );
+        }
     });
 
 
@@ -26,8 +30,7 @@ const GalleryItem = ({ id, source, thumbnail, caption, description, position, to
         {/* CHANGE CLASS NAME IN SCSS FILE to cover both, also make flex spreadout */}
         <span>
             <h3>{caption}</h3>
-            test
-            <h4>HTML, CSS ...</h4>
+            {stackList}
         </span>
         <p>{description}</p>
     </article>)

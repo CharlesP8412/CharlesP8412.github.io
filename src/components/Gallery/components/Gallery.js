@@ -29,12 +29,9 @@ const Gallery = () => {
       return list;
     }
     searchTerm = searchTerm.toLowerCase();
-    //Iterate over projects
     let sResults = {};
     list.map((proj) => {
-      //Iterate over proj values
       Object.values(proj).map((val) => {
-        //Match to search terms
         if (typeof val === 'object') {
           val = val.join(" ")
         }
