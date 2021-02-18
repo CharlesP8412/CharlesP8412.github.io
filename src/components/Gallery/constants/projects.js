@@ -40,7 +40,7 @@ export const projects = [
     caption: 'Scheduler',
     description: 'React based Interview Scheduler (SPA), built using TDD methods.',
     gitub: `https://github.com/CharlesP8412/scheduler`,
-    stack: ['React', 'mySQL', 'Cypress', 'Jest'],
+    stack: ['React', 'Storybook', 'mySQL', 'Cypress', 'Jest'],
     features: ['Single Page Application (SPA)', 'JEST', 'Axios', 'CI/CD', 'Cypress',]
   },
   {
@@ -60,7 +60,7 @@ export const projects = [
     caption: 'Tweeter',
     description: 'Single Page Application, Twitter Clone utilizing client side rendering.',
     gitub: `https://github.com/CharlesP8412/tweeter`,
-    stack: ['jQuery', 'CSS', 'NodeJS', 'HTML',],
+    stack: ['NodeJS', 'jQuery', 'HTML', 'CSS',],
     features: ['Single Page App (SPA)', 'Client Side Rendering',]
   },
   {
@@ -70,7 +70,7 @@ export const projects = [
     caption: 'Tiny App',
     description: 'URL Shortening App. Given a url the app will generate a shorter url and act as a relay. (Server-side rendering)',
     gitub: `https://github.com/CharlesP8412/tinyapp`,
-    stack: ['NodeJS', 'Express', 'EJS', 'Bootstrap'],
+    stack: ['NodeJS', 'Bootstrap', 'HTML', 'CSS', 'Mocha', 'Chai'],
     features: ['Server Side Rendering', 'User Authentication', 'bcrypt', 'Cookie-sessions']
   }
 ]

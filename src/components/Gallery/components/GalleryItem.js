@@ -16,53 +16,53 @@ import postgresIco from '../../../assets/images/techIcons/postgresql.png'
 
 
 
-const GalleryItem = ({ id, source, thumbnail, caption, description, position, toggleLightbox, stack }) => {
+const GalleryItem = ({ id, source, thumbnail, caption, description, position, toggleLightbox, techStack }) => {
     const onClick = useCallback((e) => {
         e.preventDefault()
         toggleLightbox(position)
     }, [position, toggleLightbox]);
 
-    const stackIcons = stack && stack.map((tech) => {
-        tech = tech.toUpperCase();
-        switch (tech) {
+    const stackIcons = techStack && techStack.map((stack) => {
+        stack = stack.toUpperCase();
+        switch (stack) {
             case 'NODEJS':
-                return <img src={nodeIco} alt={`${tech}`} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={nodeIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'REACT':
-                return <img src={reactIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={reactIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'HTML':
-                return <img src={htmlIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={htmlIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'RUBY':
-                return <img src={rubyIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={rubyIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'SASS':
-                return <img src={sassIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={sassIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'CYPRESS':
-                return <img src={cypressIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={cypressIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'STORYBOOK':
-                return <img src={storybookIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={storybookIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'POSTGRESQL':
-                return <img src={postgresIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={postgresIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'CSS':
-                return <img src={cssIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={cssIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'BOOTSTRAP':
-                return <img src={bootstrapIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={bootstrapIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'JEST':
-                return <img src={jestIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={jestIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'JQUERY':
-                return <img src={jQueryIco} alt={``} title={`${tech}`} width="25" height="25" />;
+                return <img className="stackIco" src={jQueryIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             default: break;
         }
 
-        // if (tech === 'NodeJS') {
+        // if (stack === 'NodeJS') {
         //     test = NodeJS
         // }
-        // if (tech === stack[stack.length - 1]) {
+        // if (stack === stack[stack.length - 1]) {
 
-        //     return <img src={test} alt={``} title={`${tech}`} width="25" height="25" />;
+        //     return <img src={test} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
         // } else {
-        //     console.log("TECH", tech)
+        //     console.log("TECH", stack)
         //     return (
-        //         <img src={test} alt={``} title={`${tech} `} width="25" height="25" />
-        //         // `${ tech } | `
+        //         <img src={test} alt={`${stack}`} title={`${stack} `} width="25" height="25" />
+        //         // `${ stack } | `
         //     );
         // }
     });
