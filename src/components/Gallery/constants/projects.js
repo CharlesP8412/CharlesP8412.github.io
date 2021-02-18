@@ -20,7 +20,7 @@ export const projects = [
     caption: 'BookEnds',
     description: "Book data manager, allowing users to add data about the books they've read and share with friends. Group Collaboration",
     gitub: `https://github.com/dimontejulia/bookends`,
-    stack: ['React', 'PosgreSQL', 'Express', 'NodeJS', 'Bootstrap', 'SASS'],
+    stack: ['React', 'PostgreSQL ', 'Storybook', 'NodeJS', 'Bootstrap', 'SASS'],
     features: ['Live Search', 'Multiple APIs']
   },
   {
@@ -30,7 +30,7 @@ export const projects = [
     caption: 'PasswordKeepr',
     description: 'Password generator and manager ideal for shared accounts.  Built using NodeJS, Express, EJS, and CSS. Group Collaboration',
     gitub: `https://github.com/dlinardi/PasswordKeepR`,
-    stack: ['PosgreSQL', 'Express', 'NodeJS', 'SASS'],
+    stack: ['PostgreSQL ', 'jQuery', 'NodeJS', 'SASS'],
     features: ['Live Search', 'Encryption', 'bcrypt']
   },
   {
@@ -40,7 +40,7 @@ export const projects = [
     caption: 'Scheduler',
     description: 'React based Interview Scheduler (SPA), built using TDD methods.',
     gitub: `https://github.com/CharlesP8412/scheduler`,
-    stack: ['React', 'mySQL'],
+    stack: ['React', 'mySQL', 'Cypress', 'Jest'],
     features: ['Single Page Application (SPA)', 'JEST', 'Axios', 'CI/CD', 'Cypress',]
   },
   {
@@ -50,7 +50,7 @@ export const projects = [
     caption: 'Jungle',
     description: 'Mini E-commerce app built using MVC design, integrates Stripe payments API. Build using EDD.',
     gitub: `https://github.com/CharlesP8412/jungle`,
-    stack: ['Ruby on Rails 4', 'PostgreSQL'],
+    stack: ['Ruby', 'Rails', 'PostgreSQL', 'RSpec'],
     features: ['Authentication', 'Capybara', 'StripeAPI', 'RSpec',]
   },
   {
@@ -60,7 +60,7 @@ export const projects = [
     caption: 'Tweeter',
     description: 'Single Page Application, Twitter Clone utilizing client side rendering.',
     gitub: `https://github.com/CharlesP8412/tweeter`,
-    stack: ['jQuery', 'CSS', 'NodeJS', 'Expres',],
+    stack: ['jQuery', 'CSS', 'NodeJS', 'HTML',],
     features: ['Single Page App (SPA)', 'Client Side Rendering',]
   },
   {
@@ -70,7 +70,7 @@ export const projects = [
     caption: 'Tiny App',
     description: 'URL Shortening App. Given a url the app will generate a shorter url and act as a relay. (Server-side rendering)',
     gitub: `https://github.com/CharlesP8412/tinyapp`,
-    stack: ['NodeJS', 'Express', 'EJS', 'bcrpyt', 'cookie-sessions'],
-    features: ['Server Side Rendering', 'User Authentication',]
+    stack: ['NodeJS', 'Express', 'EJS', 'Bootstrap'],
+    features: ['Server Side Rendering', 'User Authentication', 'bcrypt', 'Cookie-sessions']
   }
 ]
