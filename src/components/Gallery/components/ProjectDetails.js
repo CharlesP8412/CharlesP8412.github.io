@@ -20,13 +20,13 @@ const ProjectDetails = ({ currentIndex, views }) => {
       </section>
       <section className="projectDetails">
 
-        <h1 className="modalTitle"><u>{project.caption}</u></h1>
-        <h4 className="modalTitle">{project.description}</h4>
-        <hr />
+        <h1 ><u>{project.caption}</u></h1>
+        <h4 >{project.description}</h4>
+
         <table>
           <tr>
-            <th><h4>Built With:</h4></th>
-            <th><h4>Features:</h4></th>
+            <th>Built With:</th>
+            <th>Features:</th>
           </tr>
           <tr>
             <td>
@@ -42,10 +42,12 @@ const ProjectDetails = ({ currentIndex, views }) => {
           </tr>
         </table>
 
-        {/* <p>
-          LONG DESCRIPTION
+        {/*         <p>
+          Long Desc / User Story
+          App x allows a user to track their passwords as well as share role based accounts within their organization, ie Social media accounts with
+          the marketing team... <br />
+          Passwords can be generated based on user criteria ie Letters, case, numbers, symbols and length
         </p> */}
-
 
       </section>
     </article>
