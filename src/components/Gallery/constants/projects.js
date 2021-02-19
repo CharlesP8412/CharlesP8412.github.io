@@ -72,5 +72,6 @@ export const projects = [
     gitub: `https://github.com/CharlesP8412/tinyapp`,
     stack: ['NodeJS', 'Bootstrap', 'HTML', 'CSS', 'Mocha', 'Chai'],
     features: ['Server Side Rendering', 'User Authentication', 'bcrypt', 'Cookie-sessions']
-  }
+  },
+
 ]

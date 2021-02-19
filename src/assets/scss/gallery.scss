@@ -1,0 +1,29 @@
+/* Search */
+span {
+  display: flex;
+  .title {
+    white-space: nowrap;
+    padding-right: 1em;
+  }
+}
+
+.stackIco {
+  margin: 0px 3px 0px 3px;
+}
+
+.projectDisplay {
+  display: flex;
+  flex-flow: row;
+  width: 98%;
+  justify-content: center;
+  .projectImages {
+    width: 66%;
+  }
+  .projectDetails {
+    width: 33%;
+    *,
+    * > * {
+      color: white;
+    }
+  }
+}
