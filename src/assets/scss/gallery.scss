@@ -18,6 +18,11 @@ span {
   justify-content: center;
   .projectImages {
     width: 66%;
+    justify-content: center;
+    display: inherit;
+    img {
+      width: 90%;
+    }
   }
   .projectDetails {
     width: 33%;
