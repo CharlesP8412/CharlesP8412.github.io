@@ -52,3 +52,16 @@ span {
     }
   }
 }
+
+// @include breakpoint(small) {
+//   $size-header-pad: 1.5em;
+
+//   /* Search */
+//   .projectSearch {
+//     display: block;
+//     .title {
+//       white-space: nowrap;
+//       padding-right: 1em;
+//     }
+//   }
+// }
