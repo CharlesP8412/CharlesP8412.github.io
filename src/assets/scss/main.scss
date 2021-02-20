@@ -1301,6 +1301,11 @@ body.is-touch {
 
   .projectDisplay {
     flex-direction: column;
+    .projectImages {
+      align-self: center;
+    }
+    table {
+    }
   }
   /* Basic */
 
