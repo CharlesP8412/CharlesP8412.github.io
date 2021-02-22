@@ -1,14 +1,15 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
+
 const ProjectDetails = ({ currentIndex, views }) => {
   const project = views[currentIndex]
 
   const features = project && project.features.map(feat => {
-    return <li>{feat}</li >
+    return <li key={uuidv4()}>{feat}</li >
   })
   const stack = project && project.stack.map(tech => {
-    return <li>{tech}</li >
+    return <li key={uuidv4()}>{tech}</li >
   })
 
   return (
