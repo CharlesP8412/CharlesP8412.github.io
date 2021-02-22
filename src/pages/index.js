@@ -25,22 +25,14 @@ const HomeIndex = () => {
             </h2>
           </header>
           <p>
-            As a full stack developer, I truly enjoy having the ability to shape and sculpt
+            As a full-stack developer, I truly enjoy having the ability to shape and sculpt
             the nerves of the information systems we use every day.
             <br />
             I've always gravitated to electronics and technology throughout my life.
             From developing and experimenting with my home lab, to deploying and using radio and information systems in past careers,
             I am always keen to develop new skills and apply my experience and prior skills to find new solutions.
           </p>
-          <ul className="actions">
-            <li>
-              <span>
-                <a href="https://www.canva.com/design/DAESCGsX-ak/Pc4kmpGUT0cMQiZxfJEPiQ/view" className="button" rel="noreferrer" target="_blank">
-                  Learn More (Resume)
-                </a>
-              </span>
-            </li>
-          </ul>
+
           <p>
             <strong>Languages:</strong> <br />
             Javascript, Ruby, HTML, CSS, SQL  <br />
@@ -51,9 +43,28 @@ const HomeIndex = () => {
             <strong>Testing, CD/CI:</strong> <br />
             JEST, Storybook, Cypress, Mocha, Chai, Rspec, CircleCI, Jenkins  <br />
             <strong>Other Skills:</strong> <br />
-            Networking (Cisco), Server and Desktop Admin (Microsoft), Linux, Project Management
-           </p>
+            Networking, Server, and Desktop Administration, Linux, Project Management
+          </p>
 
+          <p>
+            <strong>Education:</strong> <br />
+            <strong>Lighthouse Labs <br /> Web Development - Jan 2021</strong> <br />
+            12-week boot camp, teaching JavaScript, Ruby on Rails, React JS, Database and Data Modeling, Automated Testing, and Computer Science Fundamentals
+            <br />
+            <strong>Red River College <br /> Advanced Network Technology - May 2005</strong> <br />
+            Network Administration  (CCNP Level), Microsoft Server Administration, Unix, and Wireless Networks  <br />
+            Graduated with Dean's Honours
+          </p>
+
+          <ul className="actions">
+            <li>
+              <span>
+                <a href="https://www.canva.com/design/DAESCGsX-ak/Pc4kmpGUT0cMQiZxfJEPiQ/view" className="button" rel="noreferrer" target="_blank">
+                  Learn More (Resume)
+                </a>
+              </span>
+            </li>
+          </ul>
         </section>
 
         <section id="two">
