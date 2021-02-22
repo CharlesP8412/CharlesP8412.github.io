@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
+import { v4 as uuidv4 } from 'uuid';
 
 import nodeIco from '../../../assets/images/techIcons/nodejs.png'
 import reactIco from '../../../assets/images/techIcons/react.png'
@@ -26,45 +27,31 @@ const GalleryItem = ({ id, source, thumbnail, caption, description, position, to
         stack = stack.toUpperCase();
         switch (stack) {
             case 'NODEJS':
-                return <img className="stackIco" src={nodeIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={nodeIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'REACT':
-                return <img className="stackIco" src={reactIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={reactIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'HTML':
-                return <img className="stackIco" src={htmlIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={htmlIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'RUBY':
-                return <img className="stackIco" src={rubyIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={rubyIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'SASS':
-                return <img className="stackIco" src={sassIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={sassIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'CYPRESS':
-                return <img className="stackIco" src={cypressIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={cypressIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'STORYBOOK':
-                return <img className="stackIco" src={storybookIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={storybookIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'POSTGRESQL':
-                return <img className="stackIco" src={postgresIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={postgresIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'CSS':
-                return <img className="stackIco" src={cssIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={cssIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'BOOTSTRAP':
-                return <img className="stackIco" src={bootstrapIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={bootstrapIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'JEST':
-                return <img className="stackIco" src={jestIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={jestIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'JQUERY':
-                return <img className="stackIco" src={jQueryIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+                return <img className="stackIco" key={uuidv4()} src={jQueryIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             default: break;
         }
-
-        // if (stack === 'NodeJS') {
-        //     test = NodeJS
-        // }
-        // if (stack === stack[stack.length - 1]) {
-
-        //     return <img src={test} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
-        // } else {
-        //     console.log("TECH", stack)
-        //     return (
-        //         <img src={test} alt={`${stack}`} title={`${stack} `} width="25" height="25" />
-        //         // `${ stack } | `
-        //     );
-        // }
     });
 
 

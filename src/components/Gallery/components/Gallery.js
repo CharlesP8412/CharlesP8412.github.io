@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import Carousel, { Modal, ModalGateway } from 'react-images'
+import { Modal, ModalGateway } from 'react-images'
 import GalleryItem from './GalleryItem'
 import { projects } from '../constants/projects'
 import ProjectDetails from './ProjectDetails'
