@@ -1299,6 +1299,15 @@ body.is-touch {
 @include breakpoint(medium) {
   $size-header-pad: 4em;
 
+  .projectDisplay {
+    flex-direction: column;
+    .projectImages {
+      align-self: center;
+    }
+    .projectDetails {
+      width: 100%;
+    }
+  }
   /* Basic */
 
   h1,
