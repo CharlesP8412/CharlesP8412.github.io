@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 const ProjectDetails = ({ currentIndex, views }) => {
   const project = views[currentIndex]
@@ -24,22 +25,24 @@ const ProjectDetails = ({ currentIndex, views }) => {
         <h4 >{project.description}</h4>
 
         <table>
-          <tr>
-            <th>Built With:</th>
-            <th>Features:</th>
-          </tr>
-          <tr>
-            <td>
-              <ul>
-                {stack}
-              </ul>
-            </td>
-            <td>
-              <ul>
-                {features}
-              </ul>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Built With:</th>
+              <th>Features:</th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  {stack}
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  {features}
+                </ul>
+              </td>
+            </tr>
+          </tbody>
         </table>
 
         {/*         <p>

@@ -36,6 +36,10 @@ span {
     table {
       font-size: 1.5rem;
       margin-bottom: 0;
+      tr {
+        background-color: transparent;
+        border: 0;
+      }
       ul {
         margin-bottom: 0;
       }
