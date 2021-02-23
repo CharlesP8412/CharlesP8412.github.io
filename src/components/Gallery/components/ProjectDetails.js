@@ -61,7 +61,7 @@ const ProjectDetails = ({ currentIndex, views, setLightBox }) => {
         <br />
         {project && project.longDescription}
         {/* Fixed Close Button */}
-        <a onClick={() => setLightBox(false)} className="icon fa-close closeDetails"></a>
+        <i onClick={() => setLightBox(false)} className="icon fa-close closeDetails"></i>
       </section>
     </article >
   )

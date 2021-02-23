@@ -5,8 +5,14 @@ import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 
 const HomeIndex = () => {
+
   const siteTitle = 'Chuck Prystupa - Web Developer'
   const siteDescription = 'Portfolio of Chuck Prystupa'
+
+
+
+
+
 
   return (
     <Layout>
@@ -111,6 +117,7 @@ const HomeIndex = () => {
           </div>
         </section>
       </div>
+      <i id="topButton" className="icon fa-angle-double-up" onClick={() => { document.documentElement.scrollTop = 0; }}  ></i>
     </Layout>
   )
 }
