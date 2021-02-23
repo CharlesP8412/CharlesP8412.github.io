@@ -4,13 +4,28 @@ import { v4 as uuidv4 } from 'uuid';
 
 const ProjectDetails = ({ currentIndex, views }) => {
   const project = views[currentIndex]
+  let btnSpacing = 'noSpace'
 
+  console.log(project)
   const features = project && project.features.map(feat => {
     return <li key={uuidv4()}>{feat}</li >
   })
   const stack = project && project.stack.map(tech => {
     return <li key={uuidv4()}>{tech}</li >
   })
+
+  let links = null;
+  if (project.demoLink) {
+    btnSpacing = "detailButton"
+    links = [
+      <a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub</a>,
+      <a href={"project.gitHubLink"} className="button" rel="noreferrer" target="_blank">Demo</a>
+    ]
+  }
+  else {
+    btnSpacing = "noSpace"
+    links = <a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub</a>
+  }
 
   return (
     <article className="projectDisplay">
@@ -45,10 +60,10 @@ const ProjectDetails = ({ currentIndex, views }) => {
             </tr>
           </tbody>
         </table>
-        <span className="detailButton">
-          <a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub</a>
-          <a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub</a>
-          {project && project.demolink ? <a href={project.demoLink} className="button" rel="noreferrer" target="_blank">GitHub</a> : null}
+        <span className={btnSpacing}>
+          {links}
+          {/* <a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub</a>
+          {project.demolink ? <a href={project.demoLink} className="button" rel="noreferrer" target="_blank">GitHub</a> : <p> TEST</p>} */}
         </span>
         {/*         <p>
           Long Desc / User Story
