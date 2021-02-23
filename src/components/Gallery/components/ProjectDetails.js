@@ -2,7 +2,7 @@ import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
 
-const ProjectDetails = ({ currentIndex, views }) => {
+const ProjectDetails = ({ currentIndex, views, setLightBox }) => {
   const project = views[currentIndex]
   let btnSpacing = '';
 
@@ -66,9 +66,9 @@ const ProjectDetails = ({ currentIndex, views }) => {
           the marketing team... <br />
           Passwords can be generated based on user criteria ie Letters, case, numbers, symbols and length
         </p> */}
-        <a onClick={() => console.log("CLICK")} className="icon fa-close closeDetails"></a>
+        <a onClick={() => setLightBox(false)} className="icon fa-close closeDetails"></a>
       </section>
-    </article>
+    </article >
   )
 
 }
