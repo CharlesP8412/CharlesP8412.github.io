@@ -1,18 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Helmet from 'react-helmet'
 
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 
 const HomeIndex = () => {
-
+  const [showScroll, setShowScroll] = useState(false)
   const siteTitle = 'Chuck Prystupa - Web Developer'
   const siteDescription = 'Portfolio of Chuck Prystupa'
 
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  let scrollToTopBtn = <i id="topButton" className="icon fa-angle-double-up" onClick={scrollTop} style={{ display: showScroll ? 'flex' : 'none' }}></i>
 
-
-
-
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 250) {
+      setShowScroll(true)
+    } else if (showScroll && window.pageYOffset <= 250) {
+      setShowScroll(false)
+    }
+  };
 
   return (
     <Layout>
@@ -20,7 +28,7 @@ const HomeIndex = () => {
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
       </Helmet>
-
+      {window.addEventListener('scroll', checkScrollTop)}
       <div id="main">
         <section id="one">
           <header className="major">
@@ -117,7 +125,7 @@ const HomeIndex = () => {
           </div>
         </section>
       </div>
-      <i id="topButton" className="icon fa-angle-double-up" onClick={() => { document.documentElement.scrollTop = 0; }}  ></i>
+      {scrollToTopBtn}
     </Layout>
   )
 }
