@@ -60,12 +60,7 @@ const ProjectDetails = ({ currentIndex, views, setLightBox }) => {
         </span>
         <br />
         {project && project.longDescription}
-        {/*         <p>
-          Long Desc / User Story
-          App x allows a user to track their passwords as well as share role based accounts within their organization, ie Social media accounts with
-          the marketing team... <br />
-          Passwords can be generated based on user criteria ie Letters, case, numbers, symbols and length
-        </p> */}
+        {/* Fixed Close Button */}
         <a onClick={() => setLightBox(false)} className="icon fa-close closeDetails"></a>
       </section>
     </article >

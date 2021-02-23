@@ -79,9 +79,9 @@ const Gallery = () => {
           {projectList}
         </div>
         )}
-        <ModalGateway scrollable={false}>
+        <ModalGateway>
           {lightboxIsOpen && (
-            <Modal onClose={toggleLightbox} preventScroll="false" >
+            <Modal onClose={toggleLightbox} preventScroll={false}>
               {/* <Carousel currentIndex={selectedIndex} views={projects} /> */}
               <ProjectDetails currentIndex={selectedIndex} views={projects} setLightBox={setLightboxIsOpen} />
             </Modal>
