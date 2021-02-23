@@ -14,18 +14,14 @@ const ProjectDetails = ({ currentIndex, views }) => {
     return <li key={uuidv4()}>{tech}</li >
   })
 
-  let links = null;
+  let links = [<a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub Repo</a>];
   if (project.demoLink) {
-    btnSpacing = "detailButton"
-    links = [
-      <a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub</a>,
-      <a href={"project.gitHubLink"} className="button" rel="noreferrer" target="_blank">Demo</a>
-    ]
+    btnSpacing = "detailButtons";
+    links.push(<a href={project.demoLink} className="button" rel="noreferrer" target="_blank">Demo</a>);
+  } else {
+    btnSpacing = "";
   }
-  else {
-    btnSpacing = "noSpace"
-    links = <a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub</a>
-  }
+
 
   return (
     <article className="projectDisplay">
@@ -62,9 +58,8 @@ const ProjectDetails = ({ currentIndex, views }) => {
         </table>
         <span className={btnSpacing}>
           {links}
-          {/* <a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub</a>
-          {project.demolink ? <a href={project.demoLink} className="button" rel="noreferrer" target="_blank">GitHub</a> : <p> TEST</p>} */}
         </span>
+        {project && project.longDescription}
         {/*         <p>
           Long Desc / User Story
           App x allows a user to track their passwords as well as share role based accounts within their organization, ie Social media accounts with

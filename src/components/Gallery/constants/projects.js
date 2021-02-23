@@ -31,17 +31,20 @@ export const projects = [
     description: 'Password generator and manager ideal for shared accounts.  Built using NodeJS, Express, EJS, and CSS. Group Collaboration',
     gitHubLink: `https://github.com/dlinardi/PasswordKeepR`,
     stack: ['PostgreSQL ', 'jQuery', 'NodeJS', 'SASS'],
-    features: ['Live Search', 'Encryption', 'bcrypt']
+    features: ['Live Search', 'Encryption', 'bcrypt'],
+    longDescription: 'Allows a user to create multiple vaults / organizations that can generate and store passwords. Vaults can also be shared with other user (ie Company Social media account for marketing dept. or Streaming services for a family)'
   },
   {
     id: '3',
     source: schedulerFull,
     thumbnail: schedulerThumb,
     caption: 'Scheduler',
-    description: 'React based Interview Scheduler (SPA), built using TDD methods.',
+    description: 'Interview Scheduler (SPA) based in React, built using Test Driven Development.',
     gitHubLink: `https://github.com/CharlesP8412/scheduler`,
+    demoLink: `https://scheduler-cvp.netlify.app/`,
     stack: ['React', 'Storybook', 'mySQL', 'Cypress', 'Jest'],
-    features: ['Single Page Application (SPA)', 'JEST', 'Axios', 'CI/CD', 'Cypress',]
+    features: ['Single Page Application (SPA)', 'Custom Hooks', 'Error Fallback'],
+    longDescription: 'Note: Demo DB API is hosted on heroku and may take a minute to wake up'
   },
   {
     id: '4',
