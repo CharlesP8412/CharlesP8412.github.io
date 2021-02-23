@@ -4,9 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 const ProjectDetails = ({ currentIndex, views }) => {
   const project = views[currentIndex]
-  let btnSpacing = 'noSpace'
+  let btnSpacing = '';
 
-  console.log(project)
   const features = project && project.features.map(feat => {
     return <li key={uuidv4()}>{feat}</li >
   })
@@ -59,6 +58,7 @@ const ProjectDetails = ({ currentIndex, views }) => {
         <span className={btnSpacing}>
           {links}
         </span>
+        <br />
         {project && project.longDescription}
         {/*         <p>
           Long Desc / User Story
@@ -66,7 +66,7 @@ const ProjectDetails = ({ currentIndex, views }) => {
           the marketing team... <br />
           Passwords can be generated based on user criteria ie Letters, case, numbers, symbols and length
         </p> */}
-
+        <a onClick={() => console.log("CLICK")} className="icon fa-close closeDetails"></a>
       </section>
     </article>
   )

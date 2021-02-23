@@ -58,6 +58,17 @@ span {
       justify-content: space-around;
     }
   }
+  .closeDetails {
+    color: black;
+    font-size: 2rem;
+    background-color: rgb(252, 54, 54);
+    border-radius: 50%;
+    border: 0px solid red;
+    padding: 0.25rem;
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+  }
 }
 
 // @include breakpoint(small) {
