@@ -11,7 +11,6 @@ const Gallery = () => {
   const [form, setForm] = useState("");
   const [results, setResults] = useState(projects);
 
-  console.log("LIGHTBOX", lightboxIsOpen)
   const toggleLightbox = useCallback(selectedIndex => {
     setLightboxIsOpen(!lightboxIsOpen)
     setSelectedIndex(selectedIndex)
@@ -80,9 +79,9 @@ const Gallery = () => {
           {projectList}
         </div>
         )}
-        <ModalGateway preventScroll={false}>
+        <ModalGateway scrollable={false}>
           {lightboxIsOpen && (
-            <Modal onClose={toggleLightbox} preventScroll={false} >
+            <Modal onClose={toggleLightbox} scrollable={false} >
               {/* <Carousel currentIndex={selectedIndex} views={projects} /> */}
               <ProjectDetails currentIndex={selectedIndex} views={projects} setLightBox={setLightboxIsOpen} />
             </Modal>
