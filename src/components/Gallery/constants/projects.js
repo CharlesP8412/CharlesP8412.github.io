@@ -19,7 +19,7 @@ export const projects = [
     thumbnail: bookEndsThumb,
     caption: 'BookEnds',
     description: "Book data manager, allowing users to add data about the books they've read and share with friends. Group Collaboration",
-    gitub: `https://github.com/dimontejulia/bookends`,
+    gitHubLink: `https://github.com/dimontejulia/bookends`,
     stack: ['React', 'PostgreSQL ', 'Storybook', 'NodeJS', 'Bootstrap', 'SASS'],
     features: ['Live Search', 'Multiple APIs']
   },
@@ -29,7 +29,7 @@ export const projects = [
     thumbnail: keeprThumb,
     caption: 'PasswordKeepr',
     description: 'Password generator and manager ideal for shared accounts.  Built using NodeJS, Express, EJS, and CSS. Group Collaboration',
-    gitub: `https://github.com/dlinardi/PasswordKeepR`,
+    gitHubLink: `https://github.com/dlinardi/PasswordKeepR`,
     stack: ['PostgreSQL ', 'jQuery', 'NodeJS', 'SASS'],
     features: ['Live Search', 'Encryption', 'bcrypt']
   },
@@ -39,7 +39,7 @@ export const projects = [
     thumbnail: schedulerThumb,
     caption: 'Scheduler',
     description: 'React based Interview Scheduler (SPA), built using TDD methods.',
-    gitub: `https://github.com/CharlesP8412/scheduler`,
+    gitHubLink: `https://github.com/CharlesP8412/scheduler`,
     stack: ['React', 'Storybook', 'mySQL', 'Cypress', 'Jest'],
     features: ['Single Page Application (SPA)', 'JEST', 'Axios', 'CI/CD', 'Cypress',]
   },
@@ -49,7 +49,7 @@ export const projects = [
     thumbnail: jungleThumb,
     caption: 'Jungle',
     description: 'Mini E-commerce app built using MVC design, integrates Stripe payments API. Build using EDD.',
-    gitub: `https://github.com/CharlesP8412/jungle`,
+    gitHubLink: `https://github.com/CharlesP8412/jungle`,
     stack: ['Ruby', 'Rails', 'PostgreSQL', 'RSpec'],
     features: ['Authentication', 'Capybara', 'StripeAPI', 'RSpec',]
   },
@@ -59,7 +59,7 @@ export const projects = [
     thumbnail: tweeterThumb,
     caption: 'Tweeter',
     description: 'Single Page Application, Twitter Clone utilizing client side rendering.',
-    gitub: `https://github.com/CharlesP8412/tweeter`,
+    gitHubLink: `https://github.com/CharlesP8412/tweeter`,
     stack: ['jQuery', 'NodeJS', 'HTML', 'CSS',],
     features: ['Single Page App (SPA)', 'Client Side Rendering',]
   },
@@ -69,7 +69,7 @@ export const projects = [
     thumbnail: tinyAppThumb,
     caption: 'Tiny App',
     description: 'URL Shortening App. Given a url the app will generate a shorter url and act as a relay. (Server-side rendering)',
-    gitub: `https://github.com/CharlesP8412/tinyapp`,
+    gitHubLink: `https://github.com/CharlesP8412/tinyapp`,
     stack: ['Bootstrap', 'NodeJS', 'HTML', 'CSS', 'Mocha', 'Chai'],
     features: ['Server Side Rendering', 'User Authentication', 'bcrypt', 'Cookie-sessions']
   },
