@@ -1303,14 +1303,14 @@ body.is-touch {
     flex-direction: column;
     .projectImages {
       align-self: center;
-      width: 95%;
+      width: 95vw;
+      img {
+        height: auto;
+      }
     }
     .projectDetails {
-      width: 90%;
+      width: 90vw;
       align-self: center;
-    }
-    table {
-      margin-right: 1rem;
     }
   }
   /* Basic */
