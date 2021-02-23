@@ -13,10 +13,10 @@ const ProjectDetails = ({ currentIndex, views, setLightBox }) => {
     return <li key={uuidv4()}>{tech}</li >
   })
 
-  let links = [<a href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub Repo</a>];
+  let links = [<a key={uuidv4()} href={project.gitHubLink} className="button" rel="noreferrer" target="_blank">GitHub Repo</a>];
   if (project.demoLink) {
     btnSpacing = "detailButtons";
-    links.push(<a href={project.demoLink} className="button" rel="noreferrer" target="_blank">Demo</a>);
+    links.push(<a key={uuidv4()} href={project.demoLink} className="button" rel="noreferrer" target="_blank">Demo</a>);
   } else {
     btnSpacing = "";
   }
