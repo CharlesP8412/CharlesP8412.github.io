@@ -1318,7 +1318,7 @@ body.is-touch {
 
   .projectDisplay {
     flex-direction: column;
-    overflow: scroll;
+    // overflow: auto;
     flex-flow: wrap;
     .projectImages {
       align-self: center;

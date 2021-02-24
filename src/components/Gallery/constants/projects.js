@@ -21,7 +21,7 @@ export const projects = [
     description: "Book data manager, allowing users to add data about the books they've read and share with friends. Group Collaboration",
     gitHubLink: `https://github.com/dimontejulia/bookends`,
     stack: ['React', 'PostgreSQL ', 'Storybook', 'NodeJS', 'Bootstrap', 'SASS'],
-    features: ['Live Search', 'Multiple APIs']
+    features: ['Live Search', 'Multiple APIs', 'Bookclubs for Users', 'User & club status updates']
   },
   {
     id: '2',

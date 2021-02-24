@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
+import Layout from '../components/layout'
 import Helmet from 'react-helmet'
 
 import Gallery from '../components/Gallery'
-import Layout from '../components/layout'
 
 const HomeIndex = () => {
   const [showScroll, setShowScroll] = useState(false)
@@ -12,7 +12,6 @@ const HomeIndex = () => {
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  let scrollToTopBtn = <i id="topButton" className="icon fa-angle-double-up" onClick={scrollTop} style={{ display: showScroll ? 'flex' : 'none' }}></i>
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 250) {
@@ -130,7 +129,7 @@ const HomeIndex = () => {
           </div>
         </section>
       </div>
-      {scrollToTopBtn}
+      <i id="topButton" className="icon fa-angle-double-up" onClick={scrollTop} style={{ display: showScroll ? 'flex' : 'none' }}></i>
     </Layout>
   )
 }
