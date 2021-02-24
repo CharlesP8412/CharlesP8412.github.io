@@ -14,6 +14,7 @@ import sassIco from '../../../assets/images/techIcons/sass.png'
 import storybookIco from '../../../assets/images/techIcons/storybook.png'
 import cypressIco from '../../../assets/images/techIcons/cypress.png'
 import postgresIco from '../../../assets/images/techIcons/postgresql.png'
+import awsICO from '../../../assets/images/techIcons/aws.png'
 
 
 
@@ -50,6 +51,8 @@ const GalleryItem = ({ id, source, thumbnail, caption, description, position, to
                 return <img className="stackIco" key={uuidv4()} src={jestIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             case 'JQUERY':
                 return <img className="stackIco" key={uuidv4()} src={jQueryIco} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
+            case 'AWS':
+                return <img className="stackIco" key={uuidv4()} src={awsICO} alt={`${stack}`} title={`${stack}`} width="25" height="25" />;
             default: break;
         }
     });

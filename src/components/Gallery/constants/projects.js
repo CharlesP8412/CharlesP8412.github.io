@@ -10,6 +10,8 @@ import schedulerThumb from '../../../assets/images/thumbs/03.jpg'
 import jungleThumb from '../../../assets/images/thumbs/04.jpg'
 import tweeterThumb from '../../../assets/images/thumbs/05.jpg'
 import tinyAppThumb from '../../../assets/images/thumbs/06.jpg'
+import landonFull from '../../../assets/images/fulls/07.png'
+import landonThumb from '../../../assets/images/fulls/07.png'
 
 
 export const projects = [
@@ -54,7 +56,20 @@ export const projects = [
     description: 'Mini E-commerce app built using MVC design, integrates Stripe payments API. Build using EDD.',
     gitHubLink: `https://github.com/CharlesP8412/jungle`,
     stack: ['Ruby', 'Rails', 'PostgreSQL', 'RSpec'],
-    features: ['Authentication', 'Capybara', 'StripeAPI', 'RSpec',]
+    features: ['Promotion Planner', 'Capybara', 'StripeAPI', 'Admin Dashboard',],
+    longDescription: 'Inheritted code, fixed various functions and added new features '
+  },
+  {
+    id: '7',
+    source: landonFull,
+    thumbnail: landonThumb,
+    caption: 'Landon Hotel',
+    description: 'Coverted legacy HTML site to React and deploy on AWS',
+    gitHubLink: `https://github.com/CharlesP8412/ll-landon`,
+    demoLink: `https://main.d2fj2tk1y03sm8.amplifyapp.com/`,
+    stack: ['React', 'AWS', 'HTML'],
+    features: ['AWS Amplify', 'DynamoDB', 'AWS Lambda', 'AWS CLI'],
+    longDescription: `Guided by LinkedIn Learning Note: Demo doesn\'t include AWS API key`
   },
   {
     id: '5',
