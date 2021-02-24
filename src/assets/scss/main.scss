@@ -59,7 +59,7 @@ $size-header-pad: 4em;
   color: white;
   font-size: 1rem;
   background-color: red;
-  opacity: 60%;
+  opacity: 0.8;
   border-radius: 15%;
   border: 0px solid red;
   padding: 0.5rem;
@@ -1318,7 +1318,7 @@ body.is-touch {
 
   .projectDisplay {
     flex-direction: column;
-    // overflow: auto;
+    overflow: auto;
     flex-flow: wrap;
     .projectImages {
       align-self: center;

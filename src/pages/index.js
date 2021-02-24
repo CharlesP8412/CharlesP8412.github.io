@@ -33,6 +33,7 @@ const HomeIndex = () => {
         <meta name="description" content={siteDescription} />
       </Helmet>
       {scrollListener}
+
       <div id="main">
         <section id="one">
           <header className="major">
