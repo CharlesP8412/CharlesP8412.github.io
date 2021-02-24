@@ -69,7 +69,7 @@ export const projects = [
     demoLink: `https://main.d2fj2tk1y03sm8.amplifyapp.com/`,
     stack: ['React', 'AWS', 'HTML'],
     features: ['AWS Amplify', 'DynamoDB', 'AWS Lambda', 'AWS CLI'],
-    longDescription: `Guided by LinkedIn Learning Note: Demo doesn\'t include AWS API key`
+    longDescription: `Guided by LinkedIn Learning`
   },
   {
     id: '5',
