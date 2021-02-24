@@ -28,7 +28,7 @@ const HomeIndex = () => {
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
       </Helmet>
-      {window && window.addEventListener('scroll', checkScrollTop)}
+      {window ? window.addEventListener('scroll', checkScrollTop) : null}
       <div id="main">
         <section id="one">
           <header className="major">
