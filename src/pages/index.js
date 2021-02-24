@@ -22,13 +22,18 @@ const HomeIndex = () => {
     }
   };
 
+  let scrollListener = null;
+  if (typeof window !== `undefined`) {
+    scrollListener = window.addEventListener('scroll', checkScrollTop)
+  }
+
   return (
     <Layout>
       <Helmet>
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
       </Helmet>
-      {window ? window.addEventListener('scroll', checkScrollTop) : null}
+      {scrollListener}
       <div id="main">
         <section id="one">
           <header className="major">
