@@ -66,7 +66,6 @@ export const projects = [
     caption: 'Landon Hotel',
     description: 'Coverted legacy HTML site to React and deploy on AWS',
     gitHubLink: `https://github.com/CharlesP8412/ll-landon`,
-    demoLink: `https://main.d2fj2tk1y03sm8.amplifyapp.com/`,
     stack: ['React', 'AWS', 'HTML'],
     features: ['AWS Amplify', 'DynamoDB', 'AWS Lambda', 'AWS CLI'],
     longDescription: `Guided by LinkedIn Learning`
