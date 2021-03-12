@@ -7,7 +7,7 @@ import Gallery from '../components/Gallery'
 const HomeIndex = () => {
   const [showScroll, setShowScroll] = useState(false)
   const siteTitle = 'Chuck Prystupa - Web Developer'
-  const siteDescription = 'Portfolio of Chuck Prystupa, full-stack web developer with a background in IT.  '
+  const siteDescription = 'Portfolio of Chuck Prystupa, full-stack web developer with a background in IT.  Located in Cambridge Ontario, of the Kitchener-Waterloo region, experienced with remote development.'
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
