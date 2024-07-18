@@ -125,7 +125,7 @@ const HomeIndex = () => {
                   <h3 className="icon fa-home">
                     <span className="label">Address</span>
                   </h3>
-                  Cambridge, Ontario
+                  Kitchener-Waterloo, Ontario
                   <br />
                   Canada
                 </li>
