@@ -1,32 +1,26 @@
 {
-  "name": "portfolio-v2",
-  "version": "1.0.0",
-  "private": true,
-  "description": "portfolio-v2",
-  "author": "C Prystupa",
-  "keywords": [
-    "gatsby"
-  ],
+  "name": "portfolio-astro",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@mdx-js/react": "^3.0.1",
-    "gatsby": "^5.13.5",
-    "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-mdx": "^5.13.1",
-    "gatsby-plugin-sass": "^6.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-sitemap": "^6.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.77.8"
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/react": "^4.1.0",
+    "astro": "^5.17.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.8",
+    "typescript": "^5.9.3",
+    "uuid": "^11.0.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1"
   }
 }
