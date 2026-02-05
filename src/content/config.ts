@@ -3,25 +3,34 @@ import { defineCollection, z } from 'astro:content';
 const techStackCollection = defineCollection({
   type: 'data',
   schema: z.object({
-    name: z.string(),
-    icon: z.string(),
-    category: z.enum(['language', 'framework', 'database', 'testing', 'devops', 'other']),
+    items: z.array(
+      z.object({
+        name: z.string(),
+        icon: z.string(),
+        category: z.enum(['language', 'framework', 'database', 'testing', 'devops', 'other']),
+      }),
+    ),
   }),
 });
 
 const projectsCollection = defineCollection({
-  type: 'content',
+  type: 'data',
   schema: z.object({
-    id: z.string(),
-    title: z.string(),
-    description: z.string(),
-    thumbnail: z.string(),
-    image: z.string(),
-    gitHubLink: z.string(),
-    demoLink: z.string().optional(),
-    stack: z.array(z.string()),
-    features: z.array(z.string()),
-    order: z.number(),
+    items: z.array(
+      z.object({
+        id: z.string(),
+        title: z.string(),
+        description: z.string(),
+        thumbnail: z.string(),
+        image: z.string(),
+        gitHubLink: z.string(),
+        demoLink: z.string().optional(),
+        stack: z.array(z.string()),
+        features: z.array(z.string()),
+        order: z.number(),
+        longDescription: z.string().optional(),
+      }),
+    ),
   }),
 });
 
@@ -39,12 +48,17 @@ const skillsCollection = defineCollection({
 });
 
 const educationCollection = defineCollection({
-  type: 'content',
+  type: 'data',
   schema: z.object({
-    institution: z.string(),
-    program: z.string(),
-    date: z.string(),
-    order: z.number(),
+    items: z.array(
+      z.object({
+        institution: z.string(),
+        program: z.string(),
+        date: z.string(),
+        description: z.string(),
+        order: z.number(),
+      }),
+    ),
   }),
 });
 

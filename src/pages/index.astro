@@ -10,12 +10,7 @@ const skillsData = skillsEntries.length > 0 ? skillsEntries[0].data.categories.s
 
 // Load education from content collection
 const educationEntries = await getCollection('education');
-const educationData = await Promise.all(
-  educationEntries.sort((a, b) => a.data.order - b.data.order).map(async (entry) => {
-    const { Content } = await entry.render();
-    return { ...entry, Content };
-  }),
-);
+const educationData = educationEntries.length > 0 ? educationEntries[0].data.items.sort((a, b) => a.order - b.order) : [];
 ---
 
 <Layout>
@@ -57,10 +52,10 @@ const educationData = await Promise.all(
             educationData.map((edu) => (
               <>
                 <strong>
-                  {edu.data.institution} <br /> {edu.data.program} - {edu.data.date}
+                  {edu.institution} <br /> {edu.program} - {edu.date}
                 </strong>{' '}
                 <br />
-                <edu.Content />
+                {edu.description}
                 <br />
               </>
             ))

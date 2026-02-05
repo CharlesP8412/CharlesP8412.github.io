@@ -2,28 +2,63 @@
 import { getCollection } from 'astro:content';
 import Gallery from './Gallery';
 
+// Import images
+import bookEndsFull from '../../images/fulls/01.jpg';
+import keeprFull from '../../images/fulls/02.jpg';
+import schedulerFull from '../../images/fulls/03.gif';
+import jungleFull from '../../images/fulls/04.gif';
+import tweeterFull from '../../images/fulls/05.jpg';
+import tinyAppFull from '../../images/fulls/06.jpg';
+import landonFull from '../../images/fulls/07.png';
+import bookEndsThumb from '../../images/thumbs/01.jpg';
+import keeprThumb from '../../images/thumbs/02.jpg';
+import schedulerThumb from '../../images/thumbs/03.jpg';
+import jungleThumb from '../../images/thumbs/04.jpg';
+import tweeterThumb from '../../images/thumbs/05.jpg';
+import tinyAppThumb from '../../images/thumbs/06.jpg';
+import landonThumb from '../../images/fulls/07.png';
+
+// Image map
+const imageMap: {
+  fulls: Record<string, string>;
+  thumbs: Record<string, string>;
+} = {
+  fulls: {
+    '01.jpg': bookEndsFull.src,
+    '02.jpg': keeprFull.src,
+    '03.gif': schedulerFull.src,
+    '04.gif': jungleFull.src,
+    '05.jpg': tweeterFull.src,
+    '06.jpg': tinyAppFull.src,
+    '07.png': landonFull.src,
+  },
+  thumbs: {
+    '01.jpg': bookEndsThumb.src,
+    '02.jpg': keeprThumb.src,
+    '03.jpg': schedulerThumb.src,
+    '04.jpg': jungleThumb.src,
+    '05.jpg': tweeterThumb.src,
+    '06.jpg': tinyAppThumb.src,
+    '07.png': landonThumb.src,
+  },
+};
+
 // Load projects from content collection
 const projectEntries = await getCollection('projects');
-const projects = projectEntries
-  .map((entry) => ({
-    id: entry.data.id,
-    title: entry.data.title,
-    description: entry.data.description,
-    thumbnail: entry.data.thumbnail,
-    image: entry.data.image,
-    gitHubLink: entry.data.gitHubLink,
-    demoLink: entry.data.demoLink,
-    stack: entry.data.stack,
-    features: entry.data.features,
-    order: entry.data.order,
-    content: entry.body,
+const projectsData = projectEntries.length > 0 ? projectEntries[0].data.items : [];
+const projects = projectsData
+  .map((project) => ({
+    ...project,
+    image: imageMap.fulls[project.image] || '',
+    thumbnail: imageMap.thumbs[project.thumbnail] || '',
   }))
   .sort((a, b) => a.order - b.order);
 
 // Load tech stack from content collection
 const techStackEntries = await getCollection('techStack');
+const techStackData = techStackEntries.length > 0 ? techStackEntries[0].data.items : [];
 const techStackMap = new Map(
-  techStackEntries.map((entry) => [entry.data.name, { name: entry.data.name, icon: entry.data.icon }]),
+  techStackData.map((item) => [item.name, { name: item.name, icon: item.icon }]),
 );
 
 // Convert Map to array of objects for passing to React

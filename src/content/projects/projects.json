@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "BookEnds",
+      "description": "Book data manager, allowing users to add data about the books they've read and share with friends. Group Collaboration",
+      "thumbnail": "01.jpg",
+      "image": "01.jpg",
+      "gitHubLink": "https://github.com/dimontejulia/bookends",
+      "stack": ["React", "PostgreSQL ", "Storybook", "NodeJS", "Bootstrap", "SASS"],
+      "features": ["Live Search", "Multiple APIs", "Bookclubs for Users", "User & club status updates"],
+      "order": 1
+    },
+    {
+      "id": "2",
+      "title": "PasswordKeepr",
+      "description": "Password generator and manager ideal for shared accounts. Built using NodeJS, Express, EJS, and CSS. Group Collaboration",
+      "thumbnail": "02.jpg",
+      "image": "02.jpg",
+      "gitHubLink": "https://github.com/dlinardi/PasswordKeepR",
+      "stack": ["PostgreSQL ", "jQuery", "NodeJS", "SASS"],
+      "features": ["Live Search", "Encryption", "bcrypt"],
+      "order": 2,
+      "longDescription": "Allows a user to create multiple vaults / organizations that can generate and store passwords. Vaults can also be shared with other user (ie Company Social media account for marketing dept. or Streaming services for a family)"
+    },
+    {
+      "id": "3",
+      "title": "Scheduler",
+      "description": "Interview Scheduler (SPA) based in React, built using Test Driven Development.",
+      "thumbnail": "03.jpg",
+      "image": "03.gif",
+      "gitHubLink": "https://github.com/CharlesP8412/scheduler",
+      "demoLink": "https://scheduler-cvp.netlify.app/",
+      "stack": ["React", "Storybook", "MySQL", "Cypress", "Jest"],
+      "features": ["Single Page Application (SPA)", "Custom Hooks", "Error Fallback"],
+      "order": 3,
+      "longDescription": "Note: Demo DB API is hosted on heroku and may take a minute to wake up"
+    },
+    {
+      "id": "4",
+      "title": "Jungle",
+      "description": "Mini E-commerce app built using MVC design, integrates Stripe payments API. Build using EDD.",
+      "thumbnail": "04.jpg",
+      "image": "04.gif",
+      "gitHubLink": "https://github.com/CharlesP8412/jungle",
+      "stack": ["Ruby", "Rails", "PostgreSQL", "RSpec"],
+      "features": ["Promotion Planner", "Capybara", "StripeAPI", "Admin Dashboard"],
+      "order": 4,
+      "longDescription": "Inherited code, fixed various functions and added new features"
+    },
+    {
+      "id": "5",
+      "title": "Tweeter",
+      "description": "Single Page Application, Twitter Clone utilizing client side rendering.",
+      "thumbnail": "05.jpg",
+      "image": "05.jpg",
+      "gitHubLink": "https://github.com/CharlesP8412/tweeter",
+      "stack": ["jQuery", "NodeJS", "HTML", "CSS"],
+      "features": ["Single Page App (SPA)", "Client Side Rendering"],
+      "order": 5
+    },
+    {
+      "id": "6",
+      "title": "Tiny App",
+      "description": "URL Shortening App. Given a url the app will generate a shorter url and act as a relay. (Server-side rendering)",
+      "thumbnail": "06.jpg",
+      "image": "06.jpg",
+      "gitHubLink": "https://github.com/CharlesP8412/tinyapp",
+      "stack": ["Bootstrap", "NodeJS", "HTML", "CSS", "Mocha", "Chai"],
+      "features": ["Server Side Rendering", "User Authentication", "bcrypt", "Cookie-sessions"],
+      "order": 6
+    },
+    {
+      "id": "7",
+      "title": "Landon Hotel",
+      "description": "Converted legacy HTML site to React and deploy on AWS",
+      "thumbnail": "07.png",
+      "image": "07.png",
+      "gitHubLink": "https://github.com/CharlesP8412/ll-landon",
+      "stack": ["React", "AWS", "HTML"],
+      "features": ["AWS Amplify", "DynamoDB", "AWS Lambda", "AWS CLI"],
+      "order": 7,
+      "longDescription": "Guided by LinkedIn Learning"
+    }
+  ]
+}

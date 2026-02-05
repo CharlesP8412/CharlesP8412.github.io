@@ -1,106 +1,134 @@
 # Content Management
 
-This site uses Astro Content Collections for easy content management. All content is stored in markdown and JSON files in the `src/content` directory.
+This site uses Astro Content Collections for easy content management. All content is stored in **single JSON files** in the `src/content` directory for maximum simplicity.
 
 ## Content Structure
 
-### Projects (`src/content/projects/`)
-Projects are stored as markdown files with frontmatter. Each project file contains:
-- Metadata (title, description, links, etc.)
-- Tech stack array
-- Features array
-- Long description in markdown body
+All content is consolidated into **ONE file per collection type** - no more managing dozens of individual files!
 
-Example:
-```markdown
----
-id: '1'
-title: 'My Project'
-description: 'Short description'
-thumbnail: '/images/thumbs/01.jpg'
-image: '/images/fulls/01.jpg'
-gitHubLink: 'https://github.com/user/repo'
-demoLink: 'https://demo.example.com' # optional
-stack: ['React', 'NodeJS', 'PostgreSQL']
-features: ['Feature 1', 'Feature 2']
-order: 1
----
-
-Detailed project description goes here...
+### Projects (`src/content/projects/projects.json`)
+All 7 projects in one file with an `items` array:
+```json
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "My Project",
+      "description": "Short description",
+      "thumbnail": "01.jpg",
+      "image": "01.jpg",
+      "gitHubLink": "https://github.com/user/repo",
+      "demoLink": "https://demo.example.com",
+      "stack": ["React", "NodeJS", "PostgreSQL"],
+      "features": ["Feature 1", "Feature 2"],
+      "order": 1,
+      "longDescription": "Optional detailed description"
+    }
+  ]
+}
 ```
 
-### Skills (`src/content/skills/`)
-Skills are stored in a single JSON file with all categories:
+**Image Handling**: Image filenames (like `01.jpg`) are mapped to actual image imports in `GalleryWrapper.astro`. Physical images are in `src/images/fulls/` and `src/images/thumbs/`.
+
+### Skills (`src/content/skills/skills.json`)
+All 5 skill categories in one file:
 ```json
 {
   "categories": [
     {
       "category": "Languages",
-      "items": ["Javascript", "Ruby", "HTML"],
+      "items": ["Javascript", "Ruby", "HTML", "CSS", "SQL"],
       "order": 1
     },
     {
       "category": "Frameworks",
-      "items": ["React", "SASS", "Express"],
+      "items": ["React", "SASS", "Express", "Axios", "jQuery"],
       "order": 2
     }
   ]
 }
 ```
 
-### Education (`src/content/education/`)
-Education entries are markdown files with frontmatter:
-```markdown
----
-institution: 'University Name'
-program: 'Degree Program'
-date: 'Month Year'
-order: 1
----
-
-Detailed description of the education...
-```
-
-### Tech Stack (`src/content/techStack/`)
-Tech stack icons are defined as JSON files:
+### Education (`src/content/education/education.json`)
+All education entries in one file:
 ```json
 {
-  "name": "React",
-  "icon": "react.png",
-  "category": "framework"
+  "items": [
+    {
+      "institution": "University Name",
+      "program": "Degree Program",
+      "date": "Month Year",
+      "description": "Description of the education and achievements",
+      "order": 1
+    }
+  ]
 }
 ```
 
-The icon file should exist in `public/images/techIcons/`.
+### Tech Stack (`src/content/techStack/techStack.json`)
+All 19 tech stack items in one file:
+```json
+{
+  "items": [
+    {
+      "name": "React",
+      "icon": "react.png",
+      "category": "framework"
+    },
+    {
+      "name": "NodeJS",
+      "icon": "nodejs.png",
+      "category": "framework"
+    }
+  ]
+}
+```
+
+**Icon Handling**: Icon files should exist in `src/images/techIcons/`.
 
 ## Adding New Content
 
 ### Add a New Project
-1. Create a new `.md` file in `src/content/projects/`
-2. Add frontmatter with all required fields
-3. Add project images to `public/images/fulls/` and `public/images/thumbs/`
-4. Ensure all tech stack items referenced exist in `src/content/techStack/`
+1. Open `src/content/projects/projects.json`
+2. Add a new object to the `items` array
+3. Add project images to `src/images/fulls/` and `src/images/thumbs/`
+4. Update the image map in `src/components/Gallery/GalleryWrapper.astro` if adding new image files
+5. Ensure all tech stack items referenced exist in `techStack.json`
 
-### Add a New Skill Category
+### Add a New Skill
 1. Open `src/content/skills/skills.json`
-2. Add a new object to the `categories` array with category name, items array, and order
-3. Save the file
+2. Find the appropriate category or add a new one to the `categories` array
+3. Add your skill to the `items` array
+4. Adjust `order` numbers if needed
 
 ### Add a New Tech Stack Item
-1. Create a new `.json` file in `src/content/techStack/`
-2. Add the corresponding icon to `public/images/techIcons/`
-3. Name format should match what's used in project stack arrays
+1. Open `src/content/techStack/techStack.json`
+2. Add a new object to the `items` array with name, icon, and category
+3. Add the corresponding icon PNG file to `src/images/techIcons/`
+4. Name must match exactly what's used in project stack arrays
 
 ### Add Education Entry
-1. Create a new `.md` file in `src/content/education/`
-2. Add frontmatter with institution, program, date, and order
-3. Add details in the markdown body
+1. Open `src/content/education/education.json`
+2. Add a new object to the `items` array
+3. Set appropriate order number for display sequence
 
 ## Benefits of This Approach
 
-1. **Single Source of Truth**: Content is in one place, not scattered across components
-2. **Easy Updates**: Edit markdown/JSON files instead of modifying code
-3. **Type Safety**: Astro validates content against schemas
-4. **Maintainable**: Clear separation of content and presentation
-5. **Version Control**: Content changes are tracked in git
-6. **No Code Changes**: Add/update content without touching React/Astro components
+✅ **Single Source of Truth**: Each content type in ONE file  
+✅ **Easy Updates**: Edit one file to see all content of that type at once  
+✅ **Type Safety**: Astro validates all content against schemas  
+✅ **Maintainable**: Clear separation of content and presentation  
+✅ **Version Control**: Content changes are easily tracked in git  
+✅ **No Code Changes**: Add/update content without touching React/Astro components  
+✅ **Simple Structure**: No need to manage 30+ separate markdown/JSON files  
+✅ **Better Overview**: See all projects, skills, education, or tech items in one place  
+
+## Previous Structure (For Reference)
+
+The old structure had:
+- 7 separate markdown files for projects
+- 5 separate JSON files for skills
+- 2 separate markdown files for education
+- 19 separate JSON files for tech stack
+
+**Total: 33 files** → **Now: 4 files** 🎉
