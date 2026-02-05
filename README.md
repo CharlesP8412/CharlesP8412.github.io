@@ -1,3 +1,10 @@
+# CPrystupa.com Static Site
+
+Uses astro in `source` branch, and is deployed to GitHub Pages from `master` branch.
+Setup to automatically deploy to GitHub Pages on push to `source` branch, using github actions. See `.github/workflows/deploy.yml` for details.
+
+---
+
 # Astro Starter Kit: Minimal
 
 ```sh
