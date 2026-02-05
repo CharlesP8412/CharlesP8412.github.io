@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import type { Project } from '../../data/projects';
+import type { Project } from './Gallery';
 
 interface ProjectDetailsProps {
   currentIndex: number;
@@ -43,12 +43,12 @@ export default function ProjectDetails({ currentIndex, views, setLightBox }: Pro
   return (
     <article className="projectDisplay">
       <section className="projectImages">
-        <img src={project.source} alt="" />
+        <img src={project.image} alt="" />
         <span>{/* Thumbs */}</span>
       </section>
       <section className="projectDetails">
         <h1>
-          <u>{project.caption}</u>
+          <u>{project.title}</u>
         </h1>
         <h4>{project.description}</h4>
 
@@ -70,7 +70,7 @@ export default function ProjectDetails({ currentIndex, views, setLightBox }: Pro
         </table>
         <span className={btnSpacing}>{links}</span>
         <br />
-        {project && project.longDescription}
+        {project && project.content}
         {/* Fixed Close Button */}
         <i onClick={() => setLightBox(false)} className="icon fa-close closeDetails"></i>
       </section>
