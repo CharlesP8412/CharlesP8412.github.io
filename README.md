@@ -1,7 +1,9 @@
 # CPrystupa.com Static Site
 
-Uses astro in `source` branch, and is deployed to GitHub Pages from `master` branch.
-Setup to automatically deploy to GitHub Pages on push to `source` branch, using github actions. See `.github/workflows/deploy.yml` for details.
+Uses astro in `source` branch, Github Actions will then build and deploy to the `master` branch, which
+is set as the Github Pages source.
+
+For github actions. See `.github/workflows/deploy.yml` for details.
 
 ---
 
