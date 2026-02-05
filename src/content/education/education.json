@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "institution": "Lighthouse Labs",
+      "program": "Web Development",
+      "date": "Jan 2021",
+      "description": "12-week boot camp, teaching JavaScript, Ruby on Rails, React JS, Database and Data Modeling, Automated Testing, and Computer Science Fundamentals",
+      "order": 1
+    },
+    {
+      "institution": "Red River College",
+      "program": "Advanced Network Technology",
+      "date": "May 2005",
+      "description": "Network Administration (CCNP Level), Microsoft Server Administration, Unix, and Wireless Networks. Graduated with Dean's Honours",
+      "order": 2
+    }
+  ]
+}

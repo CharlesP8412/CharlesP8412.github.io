@@ -1,10 +1,36 @@
 import { useState, useCallback, useEffect } from 'react';
 import GalleryItem from './GalleryItem';
-import { projects, type Project } from '../../data/projects';
 
-export default function Gallery() {
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  image: string;
+  gitHubLink: string;
+  demoLink?: string;
+  stack: string[];
+  features: string[];
+  order: number;
+  content?: string;
+}
+
+interface TechStackItem {
+  name: string;
+  icon: string;
+}
+
+interface GalleryProps {
+  projects: Project[];
+  techStackData: Array<{ key: string; value: TechStackItem }>;
+}
+
+export default function Gallery({ projects, techStackData }: GalleryProps) {
   const [form, setForm] = useState('');
   const [results, setResults] = useState<Project[]>(projects);
+
+  // Reconstruct Map from array
+  const techStackMap = new Map(techStackData.map((item) => [item.key, item.value]));
 
   const toggleLightbox = useCallback((selectedIndex: string) => {
     // Future: Add lightbox functionality here
@@ -56,13 +82,14 @@ export default function Gallery() {
         <GalleryItem
           key={obj.id}
           id={obj.id}
-          source={obj.source}
+          source={obj.image}
           thumbnail={obj.thumbnail}
-          caption={obj.caption}
+          caption={obj.title}
           description={obj.description}
           techStack={obj.stack}
           position={i.toString()}
           toggleLightbox={toggleLightbox}
+          techStackData={techStackMap}
         />
       );
     });

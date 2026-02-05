@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "name": "AWS",
+      "icon": "aws.png",
+      "category": "devops"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "bootstrap.png",
+      "category": "framework"
+    },
+    {
+      "name": "Chai",
+      "icon": "jest.png",
+      "category": "testing"
+    },
+    {
+      "name": "CSS",
+      "icon": "css.png",
+      "category": "language"
+    },
+    {
+      "name": "Cypress",
+      "icon": "cypress.png",
+      "category": "testing"
+    },
+    {
+      "name": "HTML",
+      "icon": "html.png",
+      "category": "language"
+    },
+    {
+      "name": "Jest",
+      "icon": "jest.png",
+      "category": "testing"
+    },
+    {
+      "name": "jQuery",
+      "icon": "jquery.png",
+      "category": "framework"
+    },
+    {
+      "name": "Mocha",
+      "icon": "jest.png",
+      "category": "testing"
+    },
+    {
+      "name": "MySQL",
+      "icon": "postgresql.png",
+      "category": "database"
+    },
+    {
+      "name": "NodeJS",
+      "icon": "nodejs.png",
+      "category": "framework"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "postgresql.png",
+      "category": "database"
+    },
+    {
+      "name": "Rails",
+      "icon": "ruby-on-rails.png",
+      "category": "framework"
+    },
+    {
+      "name": "React",
+      "icon": "react.png",
+      "category": "framework"
+    },
+    {
+      "name": "RSpec",
+      "icon": "ruby-on-rails.png",
+      "category": "testing"
+    },
+    {
+      "name": "Ruby",
+      "icon": "ruby-on-rails.png",
+      "category": "language"
+    },
+    {
+      "name": "SASS",
+      "icon": "sass.png",
+      "category": "framework"
+    },
+    {
+      "name": "Storybook",
+      "icon": "storybook.png",
+      "category": "testing"
+    }
+  ]
+}

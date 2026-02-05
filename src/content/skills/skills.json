@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "category": "Languages",
+      "items": ["Javascript", "Ruby", "HTML", "CSS", "SQL"],
+      "order": 1
+    },
+    {
+      "category": "Frameworks",
+      "items": ["React", "SASS", "Express", "Axios", "jQuery", "EJS", "Rails", "NodeJS"],
+      "order": 2
+    },
+    {
+      "category": "Databases and CMS",
+      "items": ["PostgreSQL (PSQL)", "Git", "GitLab", "Github", "Jenkins"],
+      "order": 3
+    },
+    {
+      "category": "Testing, CD/CI",
+      "items": ["JEST", "Storybook", "Cypress", "Mocha", "Chai", "Rspec", "CircleCI", "Jenkins"],
+      "order": 4
+    },
+    {
+      "category": "Other Skills",
+      "items": ["Networking, Server, and Desktop Administration", "Linux", "Project Management"],
+      "order": 5
+    }
+  ]
+}
