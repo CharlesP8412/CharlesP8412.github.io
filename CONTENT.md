@@ -30,12 +30,21 @@ Detailed project description goes here...
 ```
 
 ### Skills (`src/content/skills/`)
-Skills are stored as JSON files by category:
+Skills are stored in a single JSON file with all categories:
 ```json
 {
-  "category": "Languages",
-  "items": ["Javascript", "Ruby", "HTML"],
-  "order": 1
+  "categories": [
+    {
+      "category": "Languages",
+      "items": ["Javascript", "Ruby", "HTML"],
+      "order": 1
+    },
+    {
+      "category": "Frameworks",
+      "items": ["React", "SASS", "Express"],
+      "order": 2
+    }
+  ]
 }
 ```
 
@@ -73,8 +82,9 @@ The icon file should exist in `public/images/techIcons/`.
 4. Ensure all tech stack items referenced exist in `src/content/techStack/`
 
 ### Add a New Skill Category
-1. Create a new `.json` file in `src/content/skills/`
-2. Define category name, items array, and order
+1. Open `src/content/skills/skills.json`
+2. Add a new object to the `categories` array with category name, items array, and order
+3. Save the file
 
 ### Add a New Tech Stack Item
 1. Create a new `.json` file in `src/content/techStack/`

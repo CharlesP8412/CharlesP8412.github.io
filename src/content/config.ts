@@ -28,9 +28,13 @@ const projectsCollection = defineCollection({
 const skillsCollection = defineCollection({
   type: 'data',
   schema: z.object({
-    category: z.string(),
-    items: z.array(z.string()),
-    order: z.number(),
+    categories: z.array(
+      z.object({
+        category: z.string(),
+        items: z.array(z.string()),
+        order: z.number(),
+      }),
+    ),
   }),
 });
 

@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 
 // Load skills from content collection
 const skillsEntries = await getCollection('skills');
-const skills = skillsEntries.sort((a, b) => a.data.order - b.data.order);
+const skillsData = skillsEntries[0].data.categories.sort((a, b) => a.order - b.order);
 
 // Load education from content collection
 const educationEntries = await getCollection('education');
@@ -41,10 +41,10 @@ const educationData = await Promise.all(
       <article>
         <p>
           {
-            skills.map((skill) => (
+            skillsData.map((skill) => (
               <>
-                <strong>{skill.data.category}:</strong> <br />
-                {skill.data.items.join(', ')} <br />
+                <strong>{skill.category}:</strong> <br />
+                {skill.items.join(', ')} <br />
               </>
             ))
           }
