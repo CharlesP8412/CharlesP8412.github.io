@@ -6,7 +6,7 @@ thumbnail: '/images/thumbs/03.jpg'
 image: '/images/fulls/03.gif'
 gitHubLink: 'https://github.com/CharlesP8412/scheduler'
 demoLink: 'https://scheduler-cvp.netlify.app/'
-stack: ['React', 'Storybook', 'mySQL', 'Cypress', 'Jest']
+stack: ['React', 'Storybook', 'MySQL', 'Cypress', 'Jest']
 features: ['Single Page Application (SPA)', 'Custom Hooks', 'Error Fallback']
 order: 3
 ---

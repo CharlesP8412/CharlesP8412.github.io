@@ -10,4 +10,4 @@ features: ['Promotion Planner', 'Capybara', 'StripeAPI', 'Admin Dashboard']
 order: 4
 ---
 
-Inheritted code, fixed various functions and added new features
+Inherited code, fixed various functions and added new features

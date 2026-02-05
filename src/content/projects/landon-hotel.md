@@ -1,7 +1,7 @@
 ---
 id: '7'
 title: 'Landon Hotel'
-description: 'Coverted legacy HTML site to React and deploy on AWS'
+description: 'Converted legacy HTML site to React and deploy on AWS'
 thumbnail: '/images/fulls/07.png'
 image: '/images/fulls/07.png'
 gitHubLink: 'https://github.com/CharlesP8412/ll-landon'
