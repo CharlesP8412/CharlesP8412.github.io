@@ -7,7 +7,7 @@
       "thumbnail": "01.jpg",
       "image": "01.jpg",
       "gitHubLink": "https://github.com/dimontejulia/bookends",
-      "stack": ["React", "PostgreSQL ", "Storybook", "NodeJS", "Bootstrap", "SASS"],
+      "stack": ["React", "PostgreSQL", "Storybook", "NodeJS", "Bootstrap", "SASS"],
       "features": ["Live Search", "Multiple APIs", "Bookclubs for Users", "User & club status updates"],
       "order": 1
     },
@@ -18,7 +18,7 @@
       "thumbnail": "02.jpg",
       "image": "02.jpg",
       "gitHubLink": "https://github.com/dlinardi/PasswordKeepR",
-      "stack": ["PostgreSQL ", "jQuery", "NodeJS", "SASS"],
+      "stack": ["PostgreSQL", "jQuery", "NodeJS", "SASS"],
       "features": ["Live Search", "Encryption", "bcrypt"],
       "order": 2,
       "longDescription": "Allows a user to create multiple vaults / organizations that can generate and store passwords. Vaults can also be shared with other user (ie Company Social media account for marketing dept. or Streaming services for a family)"

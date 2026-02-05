@@ -56,11 +56,6 @@
       "category": "framework"
     },
     {
-      "name": "PostgreSQL ",
-      "icon": "postgresql.png",
-      "category": "database"
-    },
-    {
       "name": "PostgreSQL",
       "icon": "postgresql.png",
       "category": "database"
