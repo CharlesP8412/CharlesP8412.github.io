@@ -6,6 +6,10 @@ This site uses Astro Content Collections for easy content management. All conten
 
 All content is consolidated into **ONE file per collection type** - no more managing dozens of individual files!
 
+**Note on folder structure**: Astro requires each collection to have its own folder (e.g., `projects/`), but now each folder contains only ONE consolidated JSON file instead of many separate files. This is the cleanest structure that Astro supports.
+
+**Images location**: Images stay in `src/images/` (not in `content/`) because Astro's build system requires them there for proper asset optimization and processing.
+
 ### Projects (`src/content/projects/projects.json`)
 All 7 projects in one file with an `items` array:
 ```json
@@ -122,6 +126,19 @@ All 19 tech stack items in one file:
 ✅ **No Code Changes**: Add/update content without touching React/Astro components  
 ✅ **Simple Structure**: No need to manage 30+ separate markdown/JSON files  
 ✅ **Better Overview**: See all projects, skills, education, or tech items in one place  
+
+## Why This Structure?
+
+**Why keep folders if there's only one file?**  
+Astro's content collections architecture requires each collection to be in its own folder. We can't put all JSON files directly in `src/content/` - Astro won't recognize them. The folders are necessary, but now each folder contains only ONE consolidated file instead of many separate files.
+
+**Why keep images in `src/images/`?**  
+Astro's build system needs images in `src/` for:
+- Asset optimization and processing
+- Proper hashing for cache busting
+- Import-based references that work with the build pipeline
+
+Moving images to `content/` would break the build and prevent proper optimization.
 
 ## Previous Structure (For Reference)
 
