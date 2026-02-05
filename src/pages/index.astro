@@ -1,7 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Gallery from '../components/Gallery/Gallery';
+import GalleryWrapper from '../components/Gallery/GalleryWrapper.astro';
 import ScrollToTop from '../components/ScrollToTop';
+import { getCollection } from 'astro:content';
+
+// Load skills from content collection
+const skillsEntries = await getCollection('skills');
+const skills = skillsEntries.sort((a, b) => a.data.order - b.data.order);
+
+// Load education from content collection
+const educationEntries = await getCollection('education');
+const educationData = await Promise.all(
+  educationEntries.sort((a, b) => a.data.order - b.data.order).map(async (entry) => {
+    const { Content } = await entry.render();
+    return { ...entry, Content };
+  }),
+);
 ---
 
 <Layout>
@@ -26,34 +40,31 @@ import ScrollToTop from '../components/ScrollToTop';
       </article>
       <article>
         <p>
-          <strong>Languages:</strong> <br />
-          Javascript, Ruby, HTML, CSS, SQL <br />
-          <strong>Frameworks:</strong> <br />
-          React, SASS, Express, Axios, jQuery, EJS, Rails, NodeJS <br />
-          <strong>Databases and CMS:</strong> <br />
-          PostgreSQL (PSQL), Git, GitLab, Github, Jenkins <br />
-          <strong>Testing, CD/CI:</strong> <br />
-          JEST, Storybook, Cypress, Mocha, Chai, Rspec, CircleCI, Jenkins <br />
-          <strong>Other Skills:</strong> <br />
-          Networking, Server, and Desktop Administration, Linux, Project Management
+          {
+            skills.map((skill) => (
+              <>
+                <strong>{skill.data.category}:</strong> <br />
+                {skill.data.items.join(', ')} <br />
+              </>
+            ))
+          }
         </p>
       </article>
       <article>
         <p>
           <strong>Education:</strong> <br />
-          <strong>
-            Lighthouse Labs <br /> Web Development - Jan 2021
-          </strong>{' '}
-          <br />
-          12-week boot camp, teaching JavaScript, Ruby on Rails, React JS, Database and Data Modeling, Automated
-          Testing, and Computer Science Fundamentals
-          <br />
-          <strong>
-            Red River College <br /> Advanced Network Technology - May 2005
-          </strong>{' '}
-          <br />
-          Network Administration (CCNP Level), Microsoft Server Administration, Unix, and Wireless Networks <br />
-          Graduated with Dean's Honours
+          {
+            educationData.map((edu) => (
+              <>
+                <strong>
+                  {edu.data.institution} <br /> {edu.data.program} - {edu.data.date}
+                </strong>{' '}
+                <br />
+                <edu.Content />
+                <br />
+              </>
+            ))
+          }
         </p>
       </article>
       <ul class="actions">
@@ -73,7 +84,7 @@ import ScrollToTop from '../components/ScrollToTop';
     </section>
 
     <section id="two">
-      <Gallery client:load />
+      <GalleryWrapper />
 
       <ul class="actions">
         <li>

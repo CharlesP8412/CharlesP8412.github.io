@@ -1,0 +1,5 @@
+{
+  "category": "Testing, CD/CI",
+  "items": ["JEST", "Storybook", "Cypress", "Mocha", "Chai", "Rspec", "CircleCI", "Jenkins"],
+  "order": 4
+}
