@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Gallery from './Gallery';
 
-// Import images
+// Import project images
 import bookEndsFull from '../../images/fulls/01.jpg';
 import keeprFull from '../../images/fulls/02.jpg';
 import schedulerFull from '../../images/fulls/03.gif';
@@ -18,7 +18,22 @@ import tweeterThumb from '../../images/thumbs/05.jpg';
 import tinyAppThumb from '../../images/thumbs/06.jpg';
 import landonThumb from '../../images/fulls/07.png';
 
-// Image map
+// Import tech stack icons
+import awsIcon from '../../images/techIcons/aws.png';
+import bootstrapIcon from '../../images/techIcons/bootstrap.png';
+import cssIcon from '../../images/techIcons/css.png';
+import cypressIcon from '../../images/techIcons/cypress.png';
+import htmlIcon from '../../images/techIcons/html.png';
+import jestIcon from '../../images/techIcons/jest.png';
+import jqueryIcon from '../../images/techIcons/jquery.png';
+import nodejsIcon from '../../images/techIcons/nodejs.png';
+import postgresqlIcon from '../../images/techIcons/postgresql.png';
+import reactIcon from '../../images/techIcons/react.png';
+import rubyIcon from '../../images/techIcons/ruby-on-rails.png';
+import sassIcon from '../../images/techIcons/sass.png';
+import storybookIcon from '../../images/techIcons/storybook.png';
+
+// Project image map
 const imageMap: {
   fulls: Record<string, string>;
   thumbs: Record<string, string>;
@@ -43,6 +58,23 @@ const imageMap: {
   },
 };
 
+// Tech icon map
+const iconMap: Record<string, string> = {
+  'aws.png': awsIcon.src,
+  'bootstrap.png': bootstrapIcon.src,
+  'css.png': cssIcon.src,
+  'cypress.png': cypressIcon.src,
+  'html.png': htmlIcon.src,
+  'jest.png': jestIcon.src,
+  'jquery.png': jqueryIcon.src,
+  'nodejs.png': nodejsIcon.src,
+  'postgresql.png': postgresqlIcon.src,
+  'react.png': reactIcon.src,
+  'ruby-on-rails.png': rubyIcon.src,
+  'sass.png': sassIcon.src,
+  'storybook.png': storybookIcon.src,
+};
+
 // Load projects from content collection
 const projectEntries = await getCollection('projects');
 const projectsData = projectEntries.length > 0 ? projectEntries[0].data.items : [];
@@ -58,7 +90,7 @@ const projects = projectsData
 const techStackEntries = await getCollection('techStack');
 const techStackData = techStackEntries.length > 0 ? techStackEntries[0].data.items : [];
 const techStackMap = new Map(
-  techStackData.map((item) => [item.name, { name: item.name, icon: item.icon }]),
+  techStackData.map((item) => [item.name, { name: item.name, icon: iconMap[item.icon] || '' }]),
 );
 
 // Convert Map to array of objects for passing to React

@@ -40,7 +40,7 @@ export default function GalleryItem({
     techStack &&
     techStack.map((stack, index) => {
       const techData = techStackData.get(stack.trim());
-      if (!techData) {
+      if (!techData || !techData.icon) {
         return null;
       }
 
@@ -48,7 +48,7 @@ export default function GalleryItem({
         <img
           className="stackIco"
           key={`${stack}-${index}`}
-          src={`/images/techIcons/${techData.icon}`}
+          src={techData.icon}
           alt={techData.name}
           title={techData.name}
           width="25"
